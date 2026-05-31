@@ -5,6 +5,9 @@ from app.config import settings
 import os
 
 db_url = settings.DATABASE_URL
+if db_url.startswith("postgres://"):
+    db_url = db_url.replace("postgres://", "postgresql://", 1)
+
 if os.getenv("VERCEL") and db_url.startswith("sqlite:///"):
     if "./" in db_url:
         db_url = db_url.replace("sqlite:///./", "sqlite:////tmp/")
@@ -26,8 +29,18 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 
 def get_db():
-    db = SessionLocal()
+    db = None
     try:
+        db = SessionLocal()
         yield db
+    except Exception as e:
+        import logging
+        logging.getLogger("app.database").error(f"Database session creation failed: {e}")
+        from fastapi import HTTPException, status
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Database connection failed: {str(e)}"
+        )
     finally:
-        db.close()
+        if db is not None:
+            db.close()
