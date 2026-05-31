@@ -1,0 +1,782 @@
+PDF Path: C:\Users\aditya\OneDrive - Universitas Diponegoro\CV\DOCS\MANDIRI ODP\Aditya_Putra_Afendi_ODP_IT_BankMandiri.pdf
+Number of Pages: 2
+
+--- PAGE 1 (Size: 595.3200073242188 x 841.9199829101562) ---
+
+Block 0 (Coords: 95.58, 31.79 -> 502.12, 70.45):
+A D I T Y A  P U T R A  A F E N D I  
+
+Block 1 (Coords: 115.26, 66.02 -> 482.45, 99.08):
+Computer Engineering, Diponegoro University  |  Bekasi, Indonesia 
+087873778727  |  adityaputra.afendi@gmail.com  |  linkedin.com/in/adityaputraafendi 
+Product Management  •  Digital Innovation  •  UX & User-Centric Development  •  Agile Execution 
+
+Block 2 (Coords: 40.98, 110.3 -> 230.15, 124.28):
+P R O F E S S I O N A L  S U M M A R Y  
+
+Block 3 (Coords: 40.98, 123.98 -> 554.88, 192.14):
+ 
+Computer Engineering graduate (GPA 3.73/4.00) with hands-on experience in product development, agile project management, 
+and cross-functional team leadership. Built and shipped SiBantu — a mobile service platform — from ideation to deployment as 
+Product Manager in Bangkit Academy (Google, Tokopedia, Gojek & Traveloka). Architected Sibinkar, a web-based HR system 
+deployed for 500+ POLRI personnel, leading the full product lifecycle in 3 months. Backed by Google Project Management 
+Specialization, Stanford Machine Learning, and 20+ certifications. Fluent in English (C1 — TOEFL 586/677). Ready to contribute 
+as a future technology product leader in Bank Mandiri's ODP IT — Product stream. 
+
+Block 4 (Coords: 40.98, 197.3 -> 200.62, 211.28):
+C O R E  C O M P E T E N C I E S  
+
+Block 5 (Coords: 40.98, 211.04 -> 41.24, 212.41):
+ 
+
+Block 6 (Coords: 40.98, 215.48 -> 534.16, 335.3):
+ 
+Product Management: Product Lifecycle Management · Roadmap Planning · User Story Mapping · Backlog 
+Management · Stakeholder Alignment 
+Agile & Project Execution: Agile/Scrum · Sprint Planning · Cross-functional Coordination · KPI Monitoring · End-to-End Project 
+Delivery 
+User-Centric Design: Requirements Gathering · User Research · UX Principles · User Acceptance Testing · Customer-Centric 
+Solutioning 
+Technical Foundation: Python · Machine Learning (TensorFlow) · System Architecture · Web & Mobile App Development · Data 
+Analysis · Git 
+Leadership & Communication: Team Leadership · Stakeholder Management · Strategic Planning · Presentation & 
+Documentation · Digital Campaign 
+Languages: Indonesian — Native  |  English — Professional Working Proficiency (C1 · TOEFL Prediction 586/677 · Duolingo 130) 
+
+Block 7 (Coords: 40.98, 340.16 -> 251.33, 354.14):
+P R O F E S S I O N A L  E X P E R I E N C E  
+
+Block 8 (Coords: 40.98, 353.9 -> 41.24, 355.27):
+ 
+
+Block 9 (Coords: 40.98, 359.84 -> 556.79, 383.36):
+Machine Learning Graduate & Product Manager — Capstone: SiBantu 
+Sep 2024 – Jan 2025 
+Bangkit Academy led by Google, Tokopedia, Gojek & Traveloka  |  Remote, Indonesia 
+
+Block 10 (Coords: 47.46, 382.34 -> 548.03, 444.56):
+– Selected into highly competitive national cohort; served as PM and cross-functional team lead for a 6-person interdisciplinary team 
+– Developed SiBantu — a mobile platform connecting users to verified home service professionals — from ideation to production 
+– Drove full product lifecycle: user research → problem definition → wireframing → sprint development → testing → deployment 
+– Applied Agile/Scrum: managed sprint planning, backlog prioritization, and product roadmap throughout the project 
+– Delivered a production-ready app with seamless UX, intuitive booking flow, and reliable service-matching algorithm 
+
+Block 11 (Coords: 40.98, 446.78 -> 556.79, 470.3):
+Technology Intern — Sibinkar HR System (Web Application) 
+Jun 2024 – Aug 2024 
+National Traffic Management Center (NTMC) Korlantas POLRI  |  Jakarta, Indonesia 
+
+Block 12 (Coords: 47.46, 469.28 -> 533.38, 529.16):
+– Led system architecture and UI/UX design of Sibinkar — a web-based personnel management system serving 500+ active 
+POLRI staff 
+– Translated complex HR operational requirements into intuitive, user-friendly interfaces and scalable system architecture 
+– Delivered full product lifecycle (requirements → design → development → deployment) within 3 months 
+– Eliminated manual HR reporting via automated status tracking, real-time notifications, and audit-compliant data management 
+
+Block 13 (Coords: 40.98, 531.38 -> 556.79, 554.9):
+Project Officer & Digital Branding Lead — UTC2K25 (National Championship) 
+Dec 2024 – Dec 2025 
+UNDIP Taekwondo Championship 2025  |  Semarang, Indonesia 
+
+Block 14 (Coords: 47.46, 553.82 -> 521.98, 603.92):
+– Led end-to-end execution of Indonesia's first national university-level championship: 1,400+ athletes, 5,000+ visitors 
+– Built Event Branding Division from scratch; developed multi-channel digital strategy achieving: 
+– 457,700+ impressions & 6,800+ organic Instagram interactions in one month — zero paid budget 
+– Coordinated BTN as principal sponsor and 10+ brand partners; zero escalations across full project duration 
+
+Block 15 (Coords: 40.98, 606.14 -> 556.79, 629.66):
+Vice Head of Human Resource Development (PSDM) 
+Mar 2024 – May 2025 
+Himpunan Mahasiswa Teknik Komputer (HIMASKOM) — Diponegoro University  |  Semarang, Indonesia 
+
+Block 16 (Coords: 47.46, 628.64 -> 506.57, 666.62):
+– Designed and executed 12 structured development programs for 250+ members, achieving 100% completion rate 
+– Led full-cycle recruitment & onboarding for 11 new members per cohort — 100% retention rate 
+– Ensured 95%+ on-time delivery of all programs through disciplined planning and stakeholder alignment 
+
+Block 17 (Coords: 40.98, 668.84 -> 556.79, 692.36):
+Vice President 
+Jan 2023 – Jan 2024 
+UKM Taekwondo UNDIP — Diponegoro University  |  Semarang, Indonesia 
+
+Block 18 (Coords: 47.46, 691.28 -> 524.68, 726.68):
+– Managed end-to-end operations for 200+ members; achieved ~95% work program completion rate 
+– Secured Top 5 UKM recognition & "A" performance rating from UNDIP Student Senate for governance, accountability & 
+organizational impact 
+
+Block 19 (Coords: 40.98, 729.14 -> 556.79, 752.66):
+Hardware Engineer Intern 
+Aug 2025 – Mar 2026 
+Evotech  |  On-site, Indonesia 
+
+Block 20 (Coords: 40.98, 751.58 -> 524.25, 799.53):
+– Contributed to productization initiatives; collaborated with cross-functional teams to meet engineering milestones and quality 
+standards 
+ 
+ 
+
+
+--- SPANS (FONT DETAILS) ---
+Font: Arial-BoldMT | Size: 27.0 | Color: 0 | Text: 'A D I T Y A  P U T R A  A F E N D I'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: ArialMT | Size: 8.52 | Color: 4473924 | Text: 'Computer Engineering, Diponegoro University  |  Bekasi, Indonesia'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: ArialMT | Size: 8.52 | Color: 4473924 | Text: '087873778727  |  adityaputra.afendi@gmail.com  |  linkedin.com/in/adityaputraafendi'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: Arial-ItalicMT | Size: 8.52 | Color: 8947848 | Text: 'Product Management  •  Digital Innovation  •  UX & User-Centric Development  •  Agile Execution'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'P'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'R'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'O'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'F'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'E'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'S'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'S'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'I'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'O'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'N'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'A'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'L'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' S'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'U'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'M'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'M'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'A'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'R'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'Y'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: TimesNewRomanPSMT | Size: 1.02 | Color: 0 | Text: ' '
+Font: ArialMT | Size: 9.0 | Color: 0 | Text: 'Computer Engineering graduate (GPA 3.73/4.00) with hands-on experience in product development, agile project management, '
+Font: ArialMT | Size: 9.0 | Color: 0 | Text: 'and cross-functional team leadership. Built and shipped SiBantu — a mobile service platform — from ideation to deployment as '
+Font: ArialMT | Size: 9.0 | Color: 0 | Text: 'Product Manager in Bangkit Academy (Google, Tokopedia, Gojek & Traveloka). Architected Sibinkar, a web-based HR system '
+Font: ArialMT | Size: 9.0 | Color: 0 | Text: 'deployed for 500+ POLRI personnel, leading the full product lifecycle in 3 months. Backed by Google Project Management '
+Font: ArialMT | Size: 9.0 | Color: 0 | Text: 'Specialization, Stanford Machine Learning, and 20+ certifications. Fluent in English (C1 — TOEFL 586/677). Ready to contribute '
+Font: ArialMT | Size: 9.0 | Color: 0 | Text: "as a future technology product leader in Bank Mandiri's ODP IT — Product stream."
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'C'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'O'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'R'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'E'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' C'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'O'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'M'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'P'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'E'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'T'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'E'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'N'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'C'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'I'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'E'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'S'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: TimesNewRomanPSMT | Size: 1.02 | Color: 0 | Text: ' '
+Font: TimesNewRomanPSMT | Size: 1.02 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 8.52 | Color: 0 | Text: 'Product Management: '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'Product Lifecycle Management · Roadmap Planning · User Story Mapping · Backlog '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'Management · Stakeholder Alignment'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 8.52 | Color: 0 | Text: 'Agile & Project Execution: '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'Agile/Scrum · Sprint Planning · Cross-functional Coordination · KPI Monitoring · End-to-End Project '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'Delivery'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 8.52 | Color: 0 | Text: 'User-Centric Design: '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'Requirements Gathering · User Research · UX Principles · User Acceptance Testing · Customer-Centric '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'Solutioning'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 8.52 | Color: 0 | Text: 'Technical Foundation: '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'Python · Machine Learning (TensorFlow) · System Architecture · Web & Mobile App Development · Data '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'Analysis · Git'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 8.52 | Color: 0 | Text: 'Leadership & Communication: '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'Team Leadership · Stakeholder Management · Strategic Planning · Presentation & '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'Documentation · Digital Campaign'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 8.52 | Color: 0 | Text: 'Languages: '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'Indonesian — Native  |  English — Professional Working Proficiency (C1 · TOEFL Prediction 586/677 · Duolingo 130)'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'P'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'R'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'O'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'F'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'E'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'S'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'S'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'I'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'O'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'N'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'A'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'L'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' E'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'X'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'P'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'E'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'R'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'I'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'E'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'N'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'C'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'E'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: TimesNewRomanPSMT | Size: 1.02 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'Machine Learning Graduate & Product Manager — Capstone: SiBantu'
+Font: ArialMT | Size: 8.52 | Color: 8947848 | Text: ' '
+Font: ArialMT | Size: 8.52 | Color: 8947848 | Text: 'Sep 2024 – Jan 2025'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: Arial-ItalicMT | Size: 8.52 | Color: 4473924 | Text: 'Bangkit Academy led by Google, Tokopedia, Gojek & Traveloka  |  Remote, Indonesia'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: '–'
+Font: ArialMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'Selected into highly competitive national cohort; served as PM and cross-functional team lead for a 6-person interdisciplinary team'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: '–'
+Font: ArialMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'Developed SiBantu — a mobile platform connecting users to verified home service professionals — from ideation to production'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: '–'
+Font: ArialMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 8.52 | Color: 0 | Text: 'Drove full product lifecycle: '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'user research → problem definition → wireframing → sprint development → testing → deployment'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: '–'
+Font: ArialMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'Applied Agile/Scrum: managed sprint planning, backlog prioritization, and product roadmap throughout the project'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: '–'
+Font: ArialMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'Delivered a production-ready app with seamless UX, intuitive booking flow, and reliable service-matching algorithm'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'Technology Intern — Sibinkar HR System (Web Application)'
+Font: ArialMT | Size: 8.52 | Color: 8947848 | Text: ' '
+Font: ArialMT | Size: 8.52 | Color: 8947848 | Text: 'Jun 2024 – Aug 2024'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: Arial-ItalicMT | Size: 8.52 | Color: 4473924 | Text: 'National Traffic Management Center (NTMC) Korlantas POLRI  |  Jakarta, Indonesia'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: '–'
+Font: ArialMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 8.52 | Color: 0 | Text: 'Led system architecture and UI/UX design of Sibinkar — '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'a web-based personnel management system serving 500+ active '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'POLRI staff'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: '–'
+Font: ArialMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'Translated complex HR operational requirements into intuitive, user-friendly interfaces and scalable system architecture'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: '–'
+Font: ArialMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 8.52 | Color: 0 | Text: 'Delivered full product lifecycle (requirements → design → development → deployment) within '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: '3 months'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: '–'
+Font: ArialMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'Eliminated manual HR reporting via automated status tracking, real-time notifications, and audit-compliant data management'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'Project Officer & Digital Branding Lead — UTC2K25 (National Championship)'
+Font: ArialMT | Size: 8.52 | Color: 8947848 | Text: ' '
+Font: ArialMT | Size: 8.52 | Color: 8947848 | Text: 'Dec 2024 – Dec 2025'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: Arial-ItalicMT | Size: 8.52 | Color: 4473924 | Text: 'UNDIP Taekwondo Championship 2025  |  Semarang, Indonesia'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: '–'
+Font: ArialMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 8.52 | Color: 0 | Text: "Led end-to-end execution of Indonesia's first national university-level championship: "
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: '1,400+ athletes, 5,000+ visitors'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: '–'
+Font: ArialMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'Built Event Branding Division from scratch; developed multi-channel digital strategy achieving:'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: '–'
+Font: ArialMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 8.52 | Color: 0 | Text: '457,700+ impressions & 6,800+ organic Instagram interactions in one month — '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'zero paid budget'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: '–'
+Font: ArialMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'Coordinated BTN as principal sponsor and 10+ brand partners; zero escalations across full project duration'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'Vice Head of Human Resource Development (PSDM)'
+Font: ArialMT | Size: 8.52 | Color: 8947848 | Text: ' '
+Font: ArialMT | Size: 8.52 | Color: 8947848 | Text: 'Mar 2024 – May 2025'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: Arial-ItalicMT | Size: 8.52 | Color: 4473924 | Text: 'Himpunan Mahasiswa Teknik Komputer (HIMASKOM) — Diponegoro University  |  Semarang, Indonesia'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: '–'
+Font: ArialMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 8.52 | Color: 0 | Text: 'Designed and executed 12 structured development programs for 250+ members, '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'achieving 100% completion rate'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: '–'
+Font: ArialMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 8.52 | Color: 0 | Text: 'Led full-cycle recruitment & onboarding for 11 new members per cohort — '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: '100% retention rate'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: '–'
+Font: ArialMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'Ensured 95%+ on-time delivery of all programs through disciplined planning and stakeholder alignment'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'Vice President'
+Font: ArialMT | Size: 8.52 | Color: 8947848 | Text: ' '
+Font: ArialMT | Size: 8.52 | Color: 8947848 | Text: 'Jan 2023 – Jan 2024'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: Arial-ItalicMT | Size: 8.52 | Color: 4473924 | Text: 'UKM Taekwondo UNDIP — Diponegoro University  |  Semarang, Indonesia'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: '–'
+Font: ArialMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'Managed end-to-end operations for 200+ members; achieved ~95% work program completion rate'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: '–'
+Font: ArialMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 8.52 | Color: 0 | Text: 'Secured Top 5 UKM recognition & "A" performance rating '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'from UNDIP Student Senate for governance, accountability & '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'organizational impact'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'Hardware Engineer Intern'
+Font: ArialMT | Size: 8.52 | Color: 8947848 | Text: ' '
+Font: ArialMT | Size: 8.52 | Color: 8947848 | Text: 'Aug 2025 – Mar 2026'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: Arial-ItalicMT | Size: 8.52 | Color: 4473924 | Text: 'Evotech  |  On-site, Indonesia'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: '–'
+Font: ArialMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'Contributed to productization initiatives; collaborated with cross-functional teams to meet engineering milestones and quality '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'standards'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+
+
+--- PAGE 2 (Size: 595.3200073242188 x 841.9199829101562) ---
+
+Block 0 (Coords: 40.98, 33.56 -> 126.94, 47.54):
+E D U C A T I O N  
+
+Block 1 (Coords: 40.98, 47.24 -> 41.24, 48.61):
+ 
+
+Block 2 (Coords: 40.98, 53.18 -> 556.79, 97.58):
+Bachelor of Engineering — Computer Engineering 
+Aug 2022 – Mar 2026 
+Diponegoro University (Universitas Diponegoro)  |  Semarang, Indonesia 
+GPA: 3.73 / 4.00  |  Relevant Coursework: Software Engineering, System Design & Analysis, Business Intelligence, HCI, Algorithms, 
+Data Structures 
+
+Block 3 (Coords: 40.98, 102.56 -> 199.31, 116.54):
+K E Y  C E R T I F I C A T I O N S  
+
+Block 4 (Coords: 40.98, 116.24 -> 41.24, 117.61):
+ 
+
+Block 5 (Coords: 40.98, 120.62 -> 556.79, 224.66):
+ 
+Google Project Management Specialization (6 courses incl. Agile PM & Capstone)  —  Google / Coursera 
+Jan 2026 
+Introduction to Project Management  —  IBM / Coursera 
+Jan 2026 
+Capstone: Applying Project Management in the Real World  —  Google / Coursera 
+Jan 2026 
+Machine Learning Specialization  —  Stanford University / DeepLearning.AI 
+Oct 2024 
+TensorFlow Developer Specialization (7 courses)  —  DeepLearning.AI 
+Nov 2024 
+Advanced Learning Algorithms  —  Stanford University 
+Oct 2024 
+Advanced Computer Vision with TensorFlow  —  DeepLearning.AI 
+Dec 2024 
+Natural Language Processing in TensorFlow  —  DeepLearning.AI 
+Oct 2024 
+Data Analysis with Python  —  Dicoding Indonesia 
+Oct 2024 
+
+Block 6 (Coords: 40.98, 229.64 -> 227.57, 243.62):
+N O T A B L E  A C H I E V E M E N T S  
+
+Block 7 (Coords: 40.98, 243.32 -> 292.71, 291.74):
+ 
+ 
+SiBantu — Shipped Product: mobile platform built end-to-end as 
+PM; Bangkit Academy capstone endorsed by Google, Tokopedia, 
+Gojek & Traveloka 
+
+Block 8 (Coords: 297.66, 260.1 -> 546.55, 281.96):
+Sibinkar — Deployed System: web HR management system for 
+500+ POLRI personnel; full lifecycle delivered in 3 months 
+
+Block 9 (Coords: 40.98, 293.3 -> 284.1, 317.24):
+ 
+457,700+ impressions — zero-budget organic digital campaign 
+built from scratch for national championship UTC2K25 
+
+Block 10 (Coords: 297.66, 295.38 -> 529.86, 317.24):
+Top 5 UKM + "A" Rating — UNDIP Student Senate; highest 
+governance & accountability rating at Diponegoro University 
+
+Block 11 (Coords: 40.98, 318.8 -> 278.27, 342.74):
+ 
+20+ Certifications in 1 year — Google, Stanford, IBM, 
+DeepLearning.AI; spanning PM, ML, and software engineering 
+
+Block 12 (Coords: 297.66, 320.88 -> 525.68, 342.74):
+Selected from 1,000+ applicants — Female Daily Network 
+activity division; fewer than 100 of 1,000+ accepted 
+
+Block 13 (Coords: 40.98, 349.52 -> 475.01, 363.5):
+A D D I T I O N A L  L E A D E R S H I P  &  O R G A N I Z A T I O N A L  E X P E R I E N C E  
+
+Block 14 (Coords: 40.98, 363.2 -> 41.24, 364.57):
+ 
+
+Block 15 (Coords: 40.98, 367.58 -> 537.14, 443.0):
+ 
+Project Officer — Leadership Training 2024  (Jan–Mar 2024) 
+Delivered 100% completion of all planned activities; coordinated committees, speakers, and 80+ participants. 
+PIC – Taekwondo, OLIMDIPO 2023  (Apr–Dec 2023)   
+12-faculty inter-university competition with 200+ participants; managed venue, referees, and federation liaison. 
+Other roles:  
+PR Staff – The ACE 2024  |  Facilitator – Faculty Orientation ODM FT 2023 (BEM FT UNDIP)  |  Field Coordinator – PKKMB Teknik 
+Komputer 2023  |  Activity Division Staff – Female Daily Network Semarang x Beauty 2024 
+
+
+--- SPANS (FONT DETAILS) ---
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'E'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'D'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'U'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'C'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'A'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'T'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'I'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'O'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'N'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: '  '
+Font: TimesNewRomanPSMT | Size: 1.02 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'Bachelor of Engineering — Computer Engineering'
+Font: ArialMT | Size: 8.52 | Color: 8947848 | Text: ' '
+Font: ArialMT | Size: 8.52 | Color: 8947848 | Text: 'Aug 2022 – Mar 2026'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: Arial-ItalicMT | Size: 8.52 | Color: 4473924 | Text: 'Diponegoro University (Universitas Diponegoro)  |  Semarang, Indonesia'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'GPA: 3.73 / 4.00  |  Relevant Coursework: Software Engineering, System Design & Analysis, Business Intelligence, HCI, Algorithms, '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'Data Structures'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'K'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'E'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'Y'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' C'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'E'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'R'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'T'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'I'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'F'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'I'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'C'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'A'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'T'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'I'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'O'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'N'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'S'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: '  '
+Font: TimesNewRomanPSMT | Size: 1.02 | Color: 0 | Text: ' '
+Font: TimesNewRomanPSMT | Size: 1.02 | Color: 0 | Text: ' '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'Google Project Management Specialization (6 courses incl. Agile PM & Capstone)'
+Font: Arial-ItalicMT | Size: 8.52 | Color: 4473924 | Text: '  —  Google / Coursera'
+Font: ArialMT | Size: 8.52 | Color: 8947848 | Text: ' '
+Font: ArialMT | Size: 8.52 | Color: 8947848 | Text: 'Jan 2026'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'Introduction to Project Management'
+Font: Arial-ItalicMT | Size: 8.52 | Color: 4473924 | Text: '  —  IBM / Coursera'
+Font: ArialMT | Size: 8.52 | Color: 8947848 | Text: ' '
+Font: ArialMT | Size: 8.52 | Color: 8947848 | Text: 'Jan 2026'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'Capstone: Applying Project Management in the Real World'
+Font: Arial-ItalicMT | Size: 8.52 | Color: 4473924 | Text: '  —  Google / Coursera'
+Font: ArialMT | Size: 8.52 | Color: 8947848 | Text: ' '
+Font: ArialMT | Size: 8.52 | Color: 8947848 | Text: 'Jan 2026'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'Machine Learning Specialization'
+Font: Arial-ItalicMT | Size: 8.52 | Color: 4473924 | Text: '  —  Stanford University / DeepLearning.AI'
+Font: ArialMT | Size: 8.52 | Color: 8947848 | Text: ' '
+Font: ArialMT | Size: 8.52 | Color: 8947848 | Text: 'Oct 2024'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'TensorFlow Developer Specialization (7 courses)'
+Font: Arial-ItalicMT | Size: 8.52 | Color: 4473924 | Text: '  —  DeepLearning.AI'
+Font: ArialMT | Size: 8.52 | Color: 8947848 | Text: ' '
+Font: ArialMT | Size: 8.52 | Color: 8947848 | Text: 'Nov 2024'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'Advanced Learning Algorithms'
+Font: Arial-ItalicMT | Size: 8.52 | Color: 4473924 | Text: '  —  Stanford University'
+Font: ArialMT | Size: 8.52 | Color: 8947848 | Text: ' '
+Font: ArialMT | Size: 8.52 | Color: 8947848 | Text: 'Oct 2024'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'Advanced Computer Vision with TensorFlow'
+Font: Arial-ItalicMT | Size: 8.52 | Color: 4473924 | Text: '  —  DeepLearning.AI'
+Font: ArialMT | Size: 8.52 | Color: 8947848 | Text: ' '
+Font: ArialMT | Size: 8.52 | Color: 8947848 | Text: 'Dec 2024'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'Natural Language Processing in TensorFlow'
+Font: Arial-ItalicMT | Size: 8.52 | Color: 4473924 | Text: '  —  DeepLearning.AI'
+Font: ArialMT | Size: 8.52 | Color: 8947848 | Text: ' '
+Font: ArialMT | Size: 8.52 | Color: 8947848 | Text: 'Oct 2024'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'Data Analysis with Python'
+Font: Arial-ItalicMT | Size: 8.52 | Color: 4473924 | Text: '  —  Dicoding Indonesia'
+Font: ArialMT | Size: 8.52 | Color: 8947848 | Text: ' '
+Font: ArialMT | Size: 8.52 | Color: 8947848 | Text: 'Oct 2024'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'N'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'O'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'T'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'A'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'B'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'L'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'E'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' A'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'C'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'H'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'I'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'E'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'V'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'E'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'M'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'E'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'N'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'T'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'S'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: TimesNewRomanPSMT | Size: 1.02 | Color: 0 | Text: ' '
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 8.52 | Color: 0 | Text: 'SiBantu — Shipped Product: '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'mobile platform built end-to-end as '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'PM; Bangkit Academy capstone endorsed by Google, Tokopedia, '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'Gojek & Traveloka'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 8.52 | Color: 0 | Text: 'Sibinkar — Deployed System: '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'web HR management system for '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: '500+ POLRI personnel; full lifecycle delivered in 3 months'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: TimesNewRomanPSMT | Size: 1.02 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 8.52 | Color: 0 | Text: '457,700+ impressions — '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'zero-budget organic digital campaign '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'built from scratch for national championship UTC2K25'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 8.52 | Color: 0 | Text: 'Top 5 UKM + "A" Rating — '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'UNDIP Student Senate; highest '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'governance & accountability rating at Diponegoro University'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: TimesNewRomanPSMT | Size: 1.02 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 8.52 | Color: 0 | Text: '20+ Certifications in 1 year — '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'Google, Stanford, IBM, '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'DeepLearning.AI; spanning PM, ML, and software engineering'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 8.52 | Color: 0 | Text: 'Selected from 1,000+ applicants — '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'Female Daily Network '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'activity division; fewer than 100 of 1,000+ accepted'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'A'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'D'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'D'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'I'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'T'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'I'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'O'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'N'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'A'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'L'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' L'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'E'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'A'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'D'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'E'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'R'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'S'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'H'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'I'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'P'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' &'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' O'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'R'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'G'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'A'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'N'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'I'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'Z'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'A'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'T'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'I'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'O'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'N'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'A'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'L'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' E'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'X'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'P'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'E'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'R'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'I'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'E'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'N'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'C'
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 9.48 | Color: 0 | Text: 'E'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: TimesNewRomanPSMT | Size: 1.02 | Color: 0 | Text: ' '
+Font: TimesNewRomanPSMT | Size: 1.02 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 8.52 | Color: 0 | Text: 'Project Officer — Leadership Training 2024'
+Font: ArialMT | Size: 8.52 | Color: 8947848 | Text: '  (Jan–Mar 2024) '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'Delivered 100% completion of all planned activities; coordinated committees, speakers, and 80+ participants.'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 8.52 | Color: 0 | Text: 'PIC – Taekwondo, OLIMDIPO 2023'
+Font: ArialMT | Size: 8.52 | Color: 8947848 | Text: '  (Apr–Dec 2023)   '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: '12-faculty inter-university competition with 200+ participants; managed venue, referees, and federation liaison.'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+Font: Arial-BoldMT | Size: 8.52 | Color: 0 | Text: 'Other roles:  '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'PR Staff – The ACE 2024  |  Facilitator – Faculty Orientation ODM FT 2023 (BEM FT UNDIP)  |  Field Coordinator – PKKMB Teknik '
+Font: ArialMT | Size: 8.52 | Color: 0 | Text: 'Komputer 2023  |  Activity Division Staff – Female Daily Network Semarang x Beauty 2024'
+Font: TimesNewRomanPSMT | Size: 10.02 | Color: 0 | Text: ' '
+
+

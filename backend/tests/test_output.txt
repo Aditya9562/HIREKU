@@ -1,0 +1,59 @@
+Total Experience parsed: 9
+
+Item 1:
+Title: Machine Learning Graduate & Product Manager — Capstone: SiBantu - Sep 2024 – Jan 2025 - Bangkit Academy led by Google, Tokopedia, Gojek & Traveloka  |  Remote, Indonesia
+Bullets:
+  - Selected into highly competitive national cohort; served as PM and cross-functional team lead for a 6-person interdisciplinary team
+  - Developed SiBantu — a mobile platform connecting users to verified home service professionals — from ideation to production
+  - Drove full product lifecycle: user research → problem definition → wireframing → sprint development → testing → deployment
+  - Applied Agile/Scrum: managed sprint planning, backlog prioritization, and product roadmap throughout the project
+  - Delivered a production-ready app with seamless UX, intuitive booking flow, and reliable service-matching algorithm
+
+Item 2:
+Title: Technology Intern — Sibinkar HR System (Web Application) - Jun 2024 – Aug 2024 - National Traffic Management Center (NTMC) Korlantas POLRI  |  Jakarta, Indonesia
+Bullets:
+  - Led system architecture and UI/UX design of Sibinkar — a web-based personnel management system serving 500+ active POLRI staff
+  - Translated complex HR operational requirements into intuitive, user-friendly interfaces and scalable system architecture
+  - Delivered full product lifecycle (requirements → design → development → deployment) within 3 months
+  - Eliminated manual HR reporting via automated status tracking, real-time notifications, and audit-compliant data management
+
+Item 3:
+Title: Project Officer & Digital Branding Lead — UTC2K25 (National Championship) - Dec 2024 – Dec 2025 - UNDIP Taekwondo Championship 2025  |  Semarang, Indonesia
+Bullets:
+  - Led end-to-end execution of Indonesia's first national university-level championship: 1,400+ athletes, 5,000+ visitors
+  - Built Event Branding Division from scratch; developed multi-channel digital strategy achieving:
+  - 457,700+ impressions & 6,800+ organic Instagram interactions in one month — zero paid budget
+  - Coordinated BTN as principal sponsor and 10+ brand partners; zero escalations across full project duration
+
+Item 4:
+Title: Vice Head of Human Resource Development (PSDM) - Mar 2024 – May 2025 - Himpunan Mahasiswa Teknik Komputer (HIMASKOM) — Diponegoro University  |  Semarang, Indonesia
+Bullets:
+  - Designed and executed 12 structured development programs for 250+ members, achieving 100% completion rate
+  - Led full-cycle recruitment & onboarding for 11 new members per cohort — 100% retention rate
+  - Ensured 95%+ on-time delivery of all programs through disciplined planning and stakeholder alignment
+
+Item 5:
+Title: Vice President - Jan 2023 – Jan 2024 - UKM Taekwondo UNDIP — Diponegoro University  |  Semarang, Indonesia
+Bullets:
+  - Managed end-to-end operations for 200+ members; achieved ~95% work program completion rate
+  - Secured Top 5 UKM recognition & "A" performance rating from UNDIP Student Senate for governance, accountability & organizational impact
+
+Item 6:
+Title: Hardware Engineer Intern - Aug 2025 – Mar 2026 - Evotech  |  On-site, Indonesia
+Bullets:
+  - Contributed to productization initiatives; collaborated with cross-functional teams to meet engineering milestones and quality standards
+
+Item 7:
+Title: Project Officer — Leadership Training 2024  (Jan–Mar 2024)
+Bullets:
+  - Delivered 100% completion of all planned activities; coordinated committees, speakers, and 80+ participants.
+
+Item 8:
+Title: PIC – Taekwondo, OLIMDIPO 2023  (Apr–Dec 2023)
+Bullets:
+  - 12-faculty inter-university competition with 200+ participants; managed venue, referees, and federation liaison.
+
+Item 9:
+Title: Other roles: - PR Staff – The ACE 2024  |  Facilitator – Faculty Orientation ODM FT 2023 (BEM FT UNDIP)  |  Field Coordinator – PKKMB Teknik - Komputer 2023  |  Activity Division Staff – Female Daily Network Semarang x Beauty 2024
+Bullets:
+  - 

@@ -1,0 +1,307 @@
+PDF Path: C:\Users\aditya\Downloads\optimized_2deec76d-3ba9-438a-8844-e05ce1967111.pdf
+Number of Pages: 2
+
+--- PAGE 1 (Size: 612.0 x 792.0) ---
+
+Block 0 (Coords: 203.0, 40.74 -> 409.0, 65.53):
+ADITYA PUTRA AFENDI
+
+Block 1 (Coords: 74.86, 67.36 -> 537.14, 79.04):
+adityaputra.afendi@gmail.com • 087873778727 • Jakarta, Indonesia • linkedin.com/in/adityaputraafendi • github.com/aditya
+
+Block 2 (Coords: 36.0, 93.3 -> 182.14, 107.07):
+PROFESSIONAL EXPERIENCE
+
+Block 3 (Coords: 36.0, 113.33 -> 227.59, 139.56):
+Capstone: SiBantu Sep 2024 – Jan 2025
+Machine Learning Graduate & Product Manager
+
+Block 4 (Coords: 42.0, 141.36 -> 567.8, 153.04):
+• Bangkit Academy led by Google, Tokopedia, Gojek & Traveloka | Remote, Indonesia, achieving a 20% increase in performance scalability.
+
+Block 5 (Coords: 42.0, 155.86 -> 536.76, 167.54):
+• Selected into highly competitive national cohort; served as PM and cross-functional team lead for a 6-person interdisciplinary team
+
+Block 6 (Coords: 42.0, 170.36 -> 553.3, 194.54):
+• Developed SiBantu — a mobile platform connecting users to verified home service professionals — from ideation to production, cutting
+operational costs and setup times by 25%.
+
+Block 7 (Coords: 42.0, 197.36 -> 557.44, 221.54):
+• Drove full product lifecycle: user research → problem definition → wireframing → sprint development → testing → deployment, boosting
+client retention and satisfaction rates by 15%.
+
+Block 8 (Coords: 42.0, 224.36 -> 568.44, 248.54):
+• Applied Agile/Scrum: managed sprint planning, backlog prioritization, and product roadmap throughout the project, scaling user transaction
+throughput to 10k+ concurrent requests.
+
+Block 9 (Coords: 36.0, 256.33 -> 402.9, 293.56):
+Technology Intern — Sibinkar HR System (Web Application) Jun 2024 – Aug 2024
+Delivered a production-ready app with seamless UX, intuitive booking flow, and reliable
+service-matching algorithm
+
+Block 10 (Coords: 42.0, 295.36 -> 525.73, 307.04):
+• National Traffic Management Center (NTMC) Korlantas POLRI | Jakarta, Indonesia, reducing system response latency by 35%.
+
+Block 11 (Coords: 42.0, 309.86 -> 553.55, 334.04):
+• Engineered Led system architecture and UI/UX design of Sibinkar — a web-based personnel management system serving 500+ active
+POLRI staff
+
+Block 12 (Coords: 42.0, 336.86 -> 555.64, 361.04):
+• Translated complex HR operational requirements into intuitive, user-friendly interfaces and scalable system architecture, boosting client
+retention and satisfaction rates by 15%.
+
+Block 13 (Coords: 42.0, 363.86 -> 435.78, 375.54):
+• Delivered full product lifecycle (requirements → design → development → deployment) within 3 months
+
+Block 14 (Coords: 42.0, 378.36 -> 557.07, 402.54):
+• Eliminated manual HR reporting via automated status tracking, real-time notifications, and audit-compliant data management, improving
+overall code test coverage by 18%.
+
+Block 15 (Coords: 36.0, 410.33 -> 416.1, 472.56):
+UTC2K25 (National Championship) Dec 2024 – Dec 2025 - UNDIP Taekwondo
+Championship 2025 | Semarang, Indonesia - Vice Head of Human Resource
+Development (PSDM) Mar 2024 – May 2025 - Himpunan Mahasiswa Teknik Komputer
+(HIMASKOM) — Diponegoro University | Semarang, Indonesia
+Project Officer & Digital Branding Lead
+
+Block 16 (Coords: 42.0, 474.36 -> 528.51, 486.04):
+• Engineered Led end-to-end execution of Indonesia's first national university-level championship: 1,400+ athletes, 5,000+ visitors
+
+Block 17 (Coords: 42.0, 488.86 -> 556.14, 513.04):
+• Built Event Branding Division from scratch; developed multi-channel digital strategy achieving:, boosting client retention and satisfaction
+rates by 15%.
+
+Block 18 (Coords: 42.0, 515.86 -> 452.71, 527.54):
+• Pioneered 457,700+ impressions & 6,800+ organic Instagram interactions in one month — zero paid budget
+
+Block 19 (Coords: 42.0, 530.36 -> 449.61, 542.04):
+• Coordinated BTN as principal sponsor and 10+ brand partners; zero escalations across full project duration
+
+Block 20 (Coords: 42.0, 544.86 -> 474.66, 556.54):
+• Designed and executed 12 structured development programs for 250+ members, achieving 100% completion rate
+
+Block 21 (Coords: 36.0, 564.34 -> 420.35, 614.56):
+100% retention rate - Vice President Jan 2023 – Jan 2024 - UKM Taekwondo UNDIP —
+Diponegoro University | Semarang, Indonesia - Hardware Engineer Intern Aug 2025 –
+Mar 2026
+Led full-cycle recruitment & onboarding for 11 new members per cohort
+
+Block 22 (Coords: 42.0, 616.36 -> 434.02, 628.04):
+• Ensured 95%+ on-time delivery of all programs through disciplined planning and stakeholder alignment
+
+Block 23 (Coords: 42.0, 630.86 -> 417.73, 642.54):
+• Managed end-to-end operations for 200+ members; achieved ~95% work program completion rate
+
+Block 24 (Coords: 42.0, 645.36 -> 551.79, 669.54):
+• Secured Top 5 UKM recognition & "A" performance rating from UNDIP Student Senate for governance, accountability & organizational
+impact
+
+Block 25 (Coords: 42.0, 672.36 -> 356.15, 684.04):
+• Evotech | On-site, Indonesia, achieving a 20% increase in performance scalability.
+
+Block 26 (Coords: 42.0, 686.86 -> 555.2, 711.04):
+• Contributed to productization initiatives; collaborated with cross-functional teams to meet engineering milestones and quality standards,
+reducing system response latency by 35%.
+
+Block 27 (Coords: 36.0, 729.8 -> 89.9, 743.57):
+PROJECTS
+
+
+--- SPANS (FONT DETAILS) ---
+Font: Helvetica-Bold | Size: 18.0 | Color: 988970 | Text: 'ADITYA PUTRA AFENDI'
+Font: Helvetica | Size: 8.5 | Color: 4674921 | Text: 'adityaputra.afendi@gmail.com • 087873778727 • Jakarta, Indonesia • linkedin.com/in/adityaputraafendi • github.com/aditya'
+Font: Helvetica-Bold | Size: 10.0 | Color: 988970 | Text: 'PROFESSIONAL EXPERIENCE'
+Font: Helvetica-Bold | Size: 9.5 | Color: 1976635 | Text: 'Capstone: SiBantu Sep 2024 – Jan 2025'
+Font: Helvetica-Oblique | Size: 9.0 | Color: 4674921 | Text: 'Machine Learning Graduate & Product Manager'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: '• Bangkit Academy led by Google, Tokopedia, Gojek & Traveloka | Remote, Indonesia, achieving a 20% increase in performance scalability.'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: '• Selected into highly competitive national cohort; served as PM and cross-functional team lead for a 6-person interdisciplinary team'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: '• Developed SiBantu — a mobile platform connecting users to verified home service professionals — from ideation to production, cutting'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: 'operational costs and setup times by 25%.'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: '• Drove full product lifecycle: user research '
+Font: Symbol | Size: 8.5 | Color: 3359061 | Text: '→'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: ' problem definition '
+Font: Symbol | Size: 8.5 | Color: 3359061 | Text: '→'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: ' wireframing '
+Font: Symbol | Size: 8.5 | Color: 3359061 | Text: '→'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: ' sprint development '
+Font: Symbol | Size: 8.5 | Color: 3359061 | Text: '→'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: ' testing '
+Font: Symbol | Size: 8.5 | Color: 3359061 | Text: '→'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: ' deployment, boosting'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: 'client retention and satisfaction rates by 15%.'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: '• Applied Agile/Scrum: managed sprint planning, backlog prioritization, and product roadmap throughout the project, scaling user transaction'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: 'throughput to 10k+ concurrent requests.'
+Font: Helvetica-Bold | Size: 9.5 | Color: 1976635 | Text: 'Technology Intern — Sibinkar HR System (Web Application) Jun 2024 – Aug 2024'
+Font: Helvetica-Oblique | Size: 9.0 | Color: 4674921 | Text: 'Delivered a production-ready app with seamless UX, intuitive booking flow, and reliable'
+Font: Helvetica-Oblique | Size: 9.0 | Color: 4674921 | Text: 'service-matching algorithm'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: '• National Traffic Management Center (NTMC) Korlantas POLRI | Jakarta, Indonesia, reducing system response latency by 35%.'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: '• Engineered Led system architecture and UI/UX design of Sibinkar — a web-based personnel management system serving 500+ active'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: 'POLRI staff'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: '• Translated complex HR operational requirements into intuitive, user-friendly interfaces and scalable system architecture, boosting client'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: 'retention and satisfaction rates by 15%.'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: '• Delivered full product lifecycle (requirements '
+Font: Symbol | Size: 8.5 | Color: 3359061 | Text: '→'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: ' design '
+Font: Symbol | Size: 8.5 | Color: 3359061 | Text: '→'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: ' development '
+Font: Symbol | Size: 8.5 | Color: 3359061 | Text: '→'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: ' deployment) within 3 months'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: '• Eliminated manual HR reporting via automated status tracking, real-time notifications, and audit-compliant data management, improving'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: 'overall code test coverage by 18%.'
+Font: Helvetica-Bold | Size: 9.5 | Color: 1976635 | Text: 'UTC2K25 (National Championship) Dec 2024 – Dec 2025 - UNDIP Taekwondo'
+Font: Helvetica-Bold | Size: 9.5 | Color: 1976635 | Text: 'Championship 2025 | Semarang, Indonesia - Vice Head of Human Resource'
+Font: Helvetica-Bold | Size: 9.5 | Color: 1976635 | Text: 'Development (PSDM) Mar 2024 – May 2025 - Himpunan Mahasiswa Teknik Komputer'
+Font: Helvetica-Bold | Size: 9.5 | Color: 1976635 | Text: '(HIMASKOM) — Diponegoro University | Semarang, Indonesia'
+Font: Helvetica-Oblique | Size: 9.0 | Color: 4674921 | Text: 'Project Officer & Digital Branding Lead'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: "• Engineered Led end-to-end execution of Indonesia's first national university-level championship: 1,400+ athletes, 5,000+ visitors"
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: '• Built Event Branding Division from scratch; developed multi-channel digital strategy achieving:, boosting client retention and satisfaction'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: 'rates by 15%.'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: '• Pioneered 457,700+ impressions & 6,800+ organic Instagram interactions in one month — zero paid budget'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: '• Coordinated BTN as principal sponsor and 10+ brand partners; zero escalations across full project duration'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: '• Designed and executed 12 structured development programs for 250+ members, achieving 100% completion rate'
+Font: Helvetica-Bold | Size: 9.5 | Color: 1976635 | Text: '100% retention rate - Vice President Jan 2023 – Jan 2024 - UKM Taekwondo UNDIP —'
+Font: Helvetica-Bold | Size: 9.5 | Color: 1976635 | Text: 'Diponegoro University | Semarang, Indonesia - Hardware Engineer Intern Aug 2025 –'
+Font: Helvetica-Bold | Size: 9.5 | Color: 1976635 | Text: 'Mar 2026'
+Font: Helvetica-Oblique | Size: 9.0 | Color: 4674921 | Text: 'Led full-cycle recruitment & onboarding for 11 new members per cohort'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: '• Ensured 95%+ on-time delivery of all programs through disciplined planning and stakeholder alignment'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: '• Managed end-to-end operations for 200+ members; achieved ~95% work program completion rate'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: '• Secured Top 5 UKM recognition & "A" performance rating from UNDIP Student Senate for governance, accountability & organizational'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: 'impact'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: '• Evotech | On-site, Indonesia, achieving a 20% increase in performance scalability.'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: '• Contributed to productization initiatives; collaborated with cross-functional teams to meet engineering milestones and quality standards,'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: 'reducing system response latency by 35%.'
+Font: Helvetica-Bold | Size: 10.0 | Color: 988970 | Text: 'PROJECTS'
+
+
+--- PAGE 2 (Size: 612.0 x 792.0) ---
+
+Block 0 (Coords: 36.0, 42.33 -> 134.18, 55.42):
+Core Project Portfolio
+
+Block 1 (Coords: 42.0, 57.36 -> 466.15, 69.04):
+• Built and open-sourced a developer utility suite, saving active developers over 10+ hours in weekly setup times.
+
+Block 2 (Coords: 36.0, 87.8 -> 95.44, 101.57):
+EDUCATION
+
+Block 3 (Coords: 36.0, 107.83 -> 426.0, 230.06):
+Computer Engineering Aug 2022 – Mar 2026 - Diponegoro University (Universitas
+Diponegoro) | Semarang, Indonesia - Introduction to Project Management — IBM /
+Coursera Jan 2026 - Capstone: Applying Project Management in the Real World —
+Google / Coursera Jan 2026 - Machine Learning Specialization — Stanford University /
+DeepLearning.AI Oct 2024 - TensorFlow Developer Specialization (7 courses) —
+DeepLearning.AI Nov 2024 - Advanced Learning Algorithms — Stanford University Oct
+2024 - Advanced Computer Vision with TensorFlow — DeepLearning.AI Dec 2024 -
+Natural Language Processing in TensorFlow — DeepLearning.AI Oct 2024 - Data
+Analysis with Python — Dicoding Indonesia Oct 2024
+Bachelor of Engineering
+
+Block 4 (Coords: 42.0, 231.86 -> 559.75, 256.04):
+• GPA: 3.73 / 4.00 | Relevant Coursework: Software Engineering, System Design & Analysis, Business Intelligence, HCI, Algorithms, Data
+Structures
+
+Block 5 (Coords: 42.0, 258.86 -> 137.55, 270.54):
+• KEY CERTIFICATIONS
+
+Block 6 (Coords: 42.0, 273.36 -> 475.82, 285.04):
+• Google Project Management Specialization (6 courses incl. Agile PM & Capstone) — Google / Coursera Jan 2026
+
+Block 7 (Coords: 42.0, 287.86 -> 156.44, 299.54):
+• NOTABLE ACHIEVEMENTS
+
+Block 8 (Coords: 42.0, 302.36 -> 297.2, 314.04):
+• ADDITIONAL LEADERSHIP & ORGANIZATIONAL EXPERIENCE
+
+Block 9 (Coords: 36.0, 321.83 -> 576.0, 334.92):
+Leadership Training 2024 (Jan–Mar 2024) - PIC – Taekwondo, OLIMDIPO 2023
+Apr–Dec 2023
+
+Block 10 (Coords: 36.0, 335.87 -> 93.02, 348.06):
+Project Officer
+
+Block 11 (Coords: 42.0, 349.86 -> 456.7, 361.54):
+• Delivered 100% completion of all planned activities; coordinated committees, speakers, and 80+ participants.
+
+Block 12 (Coords: 42.0, 364.36 -> 461.9, 376.04):
+• 12-faculty inter-university competition with 200+ participants; managed venue, referees, and federation liaison.
+
+Block 13 (Coords: 42.0, 378.86 -> 91.74, 390.54):
+• Other roles:
+
+Block 14 (Coords: 42.0, 393.36 -> 570.0, 417.54):
+• PR Staff – The ACE 2024 | Facilitator – Faculty Orientation ODM FT 2023 (BEM FT UNDIP) | Field Coordinator – PKKMB Teknik Komputer
+2023 | Activity Division Staff – Female Daily Network Semarang x Beauty 2024
+
+Block 15 (Coords: 42.0, 420.36 -> 569.87, 444.54):
+• SiBantu — Shipped Product: mobile platform built end-to-end as PM; Bangkit Academy capstone endorsed by Google, Tokopedia, Gojek &
+Traveloka Sibinkar — Deployed System: web HR management system for 500+ POLRI personnel; full lifecycle delivered in 3 months
+
+Block 16 (Coords: 36.0, 452.33 -> 422.81, 500.56):
+Diponegoro University
+457,700+ impressions — zero-budget organic digital campaign built from scratch for national
+championship UTC2K25 Top 5 UKM + "A" Rating — UNDIP Student Senate; highest governance
+& accountability rating
+
+Block 17 (Coords: 42.0, 502.36 -> 563.12, 526.54):
+20+ Certifications in 1 year — Google, Stanford, IBM, DeepLearning.AI; spanning PM, ML, and software engineering Selected from 1,000+
+applicants — Female Daily Network activity division; fewer than 100 of 1,000+ accepted
+
+Block 18 (Coords: 36.0, 545.3 -> 119.89, 559.07):
+CERTIFICATIONS
+
+Block 19 (Coords: 42.0, 564.36 -> 136.61, 576.04):
+• AWS Cloud Practitioner
+
+Block 20 (Coords: 42.0, 578.86 -> 134.73, 590.54):
+• Professional Certificate
+
+Block 21 (Coords: 36.0, 609.3 -> 140.46, 623.07):
+SKILLS & INTERESTS
+
+Block 22 (Coords: 42.0, 628.36 -> 359.94, 640.04):
+Centric Solutioning, End Project Delivery, to, User, Languages: Indonesian — Native
+
+
+--- SPANS (FONT DETAILS) ---
+Font: Helvetica-Bold | Size: 9.5 | Color: 1976635 | Text: 'Core Project Portfolio'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: '• Built and open-sourced a developer utility suite, saving active developers over 10+ hours in weekly setup times.'
+Font: Helvetica-Bold | Size: 10.0 | Color: 988970 | Text: 'EDUCATION'
+Font: Helvetica-Bold | Size: 9.5 | Color: 1976635 | Text: 'Computer Engineering Aug 2022 – Mar 2026 - Diponegoro University (Universitas'
+Font: Helvetica-Bold | Size: 9.5 | Color: 1976635 | Text: 'Diponegoro) | Semarang, Indonesia - Introduction to Project Management — IBM /'
+Font: Helvetica-Bold | Size: 9.5 | Color: 1976635 | Text: 'Coursera Jan 2026 - Capstone: Applying Project Management in the Real World —'
+Font: Helvetica-Bold | Size: 9.5 | Color: 1976635 | Text: 'Google / Coursera Jan 2026 - Machine Learning Specialization — Stanford University /'
+Font: Helvetica-Bold | Size: 9.5 | Color: 1976635 | Text: 'DeepLearning.AI Oct 2024 - TensorFlow Developer Specialization (7 courses) —'
+Font: Helvetica-Bold | Size: 9.5 | Color: 1976635 | Text: 'DeepLearning.AI Nov 2024 - Advanced Learning Algorithms — Stanford University Oct'
+Font: Helvetica-Bold | Size: 9.5 | Color: 1976635 | Text: '2024 - Advanced Computer Vision with TensorFlow — DeepLearning.AI Dec 2024 -'
+Font: Helvetica-Bold | Size: 9.5 | Color: 1976635 | Text: 'Natural Language Processing in TensorFlow — DeepLearning.AI Oct 2024 - Data'
+Font: Helvetica-Bold | Size: 9.5 | Color: 1976635 | Text: 'Analysis with Python — Dicoding Indonesia Oct 2024'
+Font: Helvetica-Oblique | Size: 9.0 | Color: 4674921 | Text: 'Bachelor of Engineering'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: '• GPA: 3.73 / 4.00 | Relevant Coursework: Software Engineering, System Design & Analysis, Business Intelligence, HCI, Algorithms, Data'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: 'Structures'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: '• KEY CERTIFICATIONS'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: '• Google Project Management Specialization (6 courses incl. Agile PM & Capstone) — Google / Coursera Jan 2026'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: '• NOTABLE ACHIEVEMENTS'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: '• ADDITIONAL LEADERSHIP & ORGANIZATIONAL EXPERIENCE'
+Font: Helvetica-Bold | Size: 9.5 | Color: 1976635 | Text: 'Leadership Training 2024 (Jan–Mar 2024) - PIC – Taekwondo, OLIMDIPO 2023'
+Font: Helvetica | Size: 8.5 | Color: 6583435 | Text: 'Apr–Dec 2023'
+Font: Helvetica-Oblique | Size: 9.0 | Color: 4674921 | Text: 'Project Officer'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: '• Delivered 100% completion of all planned activities; coordinated committees, speakers, and 80+ participants.'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: '• 12-faculty inter-university competition with 200+ participants; managed venue, referees, and federation liaison.'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: '• Other roles:'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: '• PR Staff – The ACE 2024 | Facilitator – Faculty Orientation ODM FT 2023 (BEM FT UNDIP) | Field Coordinator – PKKMB Teknik Komputer'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: '2023 | Activity Division Staff – Female Daily Network Semarang x Beauty 2024'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: '• SiBantu — Shipped Product: mobile platform built end-to-end as PM; Bangkit Academy capstone endorsed by Google, Tokopedia, Gojek &'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: 'Traveloka Sibinkar — Deployed System: web HR management system for 500+ POLRI personnel; full lifecycle delivered in 3 months'
+Font: Helvetica-Bold | Size: 9.5 | Color: 1976635 | Text: 'Diponegoro University'
+Font: Helvetica-Oblique | Size: 9.0 | Color: 4674921 | Text: '457,700+ impressions — zero-budget organic digital campaign built from scratch for national'
+Font: Helvetica-Oblique | Size: 9.0 | Color: 4674921 | Text: 'championship UTC2K25 Top 5 UKM + "A" Rating — UNDIP Student Senate; highest governance'
+Font: Helvetica-Oblique | Size: 9.0 | Color: 4674921 | Text: '& accountability rating'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: '20+ Certifications in 1 year — Google, Stanford, IBM, DeepLearning.AI; spanning PM, ML, and software engineering Selected from 1,000+'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: 'applicants — Female Daily Network activity division; fewer than 100 of 1,000+ accepted'
+Font: Helvetica-Bold | Size: 10.0 | Color: 988970 | Text: 'CERTIFICATIONS'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: '• AWS Cloud Practitioner'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: '• Professional Certificate'
+Font: Helvetica-Bold | Size: 10.0 | Color: 988970 | Text: 'SKILLS & INTERESTS'
+Font: Helvetica | Size: 8.5 | Color: 3359061 | Text: 'Centric Solutioning, End Project Delivery, to, User, Languages: Indonesian — Native'
+
+
