@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useAuth, useUser } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
 import { User, ShieldAlert, Trash2, Calendar, ShieldCheck } from "lucide-react";
+import { getApiUrl } from "@/lib/api";
 
 export default function UserProfilePage() {
   const { getToken, signOut } = useAuth();
@@ -22,7 +23,7 @@ export default function UserProfilePage() {
     
     try {
       const token = await getToken();
-      const apiBase = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api/v1";
+      const apiBase = getApiUrl();
       
       const r = await fetch(`${apiBase}/auth/delete-account`, {
         method: "DELETE",
@@ -91,7 +92,9 @@ export default function UserProfilePage() {
                   <ShieldCheck className="w-3.5 h-3.5 text-primary-400" /> Admin Access
                 </span>
                 <span className="block text-white font-semibold">
-                  {user?.primaryEmailAddress?.emailAddress === "adityaputra.afendi@gmail.com" ? "Granted" : "None"}
+                  {["adityaputra.afendi@gmail.com", "adityaafendi02@gmail.com", "adityaafendi22@gmail.com"].includes(
+                    user?.primaryEmailAddress?.emailAddress?.toLowerCase() || ""
+                  ) ? "Granted" : "None"}
                 </span>
               </div>
             </div>

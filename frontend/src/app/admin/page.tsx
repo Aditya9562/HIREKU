@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useAuth, useUser } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { getApiUrl } from "../../lib/api";
 import { 
   Users, BarChart3, TrendingUp, DollarSign, Upload, 
   ShieldAlert, Users2, ChevronRight, Activity, ArrowLeft 
@@ -35,7 +36,12 @@ export default function AdminDashboard() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  const isAdmin = isLoaded && isSignedIn && user?.primaryEmailAddress?.emailAddress?.toLowerCase() === "adityaputra.afendi@gmail.com";
+  const adminEmails = [
+    "adityaputra.afendi@gmail.com",
+    "adityaafendi02@gmail.com",
+    "adityaafendi22@gmail.com"
+  ];
+  const isAdmin = isLoaded && isSignedIn && adminEmails.includes(user?.primaryEmailAddress?.emailAddress?.toLowerCase() || "");
 
   useEffect(() => {
     if (isLoaded && !isAdmin) {
@@ -47,7 +53,7 @@ export default function AdminDashboard() {
     async function loadMetrics() {
       try {
         const token = await getToken();
-        const apiBase = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api/v1";
+        const apiBase = getApiUrl();
         
         const r = await fetch(`${apiBase}/admin/metrics`, {
           headers: { Authorization: `Bearer ${token}` }

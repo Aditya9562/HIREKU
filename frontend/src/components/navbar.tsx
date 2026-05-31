@@ -19,7 +19,9 @@ export default function Navbar() {
 
   const isAdmin =
     isSignedIn &&
-    user?.primaryEmailAddress?.emailAddress?.toLowerCase() === "adityaputra.afendi@gmail.com";
+    ["adityaputra.afendi@gmail.com", "adityaafendi02@gmail.com", "adityaafendi22@gmail.com"].includes(
+      user?.primaryEmailAddress?.emailAddress?.toLowerCase() || ""
+    );
 
   // Scroll shadow
   useEffect(() => {

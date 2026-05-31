@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Plus, FileText, ArrowRight, Eye, Calendar, Sparkles, Lock, CheckCircle2 } from "lucide-react";
 import { useTranslation } from "@/lib/i18n";
 import { motion, AnimatePresence } from "framer-motion";
+import { getApiUrl } from "@/lib/api";
 
 interface AnalysisItem {
   id: string;
@@ -32,7 +33,7 @@ export default function Dashboard() {
     async function loadData() {
       try {
         const token = await getToken();
-        const apiBase = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api/v1";
+        const apiBase = getApiUrl();
         
         // Sync user details on backend
         await fetch(`${apiBase}/auth/sync`, {

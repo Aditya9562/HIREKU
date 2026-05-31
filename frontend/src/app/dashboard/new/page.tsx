@@ -7,6 +7,7 @@ import { useDropzone } from "react-dropzone";
 import { Upload, FileText, ArrowRight, AlertCircle, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "@/lib/i18n";
+import { getApiUrl } from "@/lib/api";
 
 export default function NewAnalysis() {
   const { getToken } = useAuth();
@@ -52,7 +53,7 @@ export default function NewAnalysis() {
     
     try {
       const token = await getToken();
-      const apiBase = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api/v1";
+      const apiBase = getApiUrl();
 
       // Stage 1: Uploading
       setLoadingStage("Uploading resume to secure storage...");

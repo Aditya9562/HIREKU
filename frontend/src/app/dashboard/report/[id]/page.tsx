@@ -8,6 +8,7 @@ import {
   Sparkles, CheckCircle2, AlertTriangle, 
   ChevronDown, BookOpen, UserCheck, ShieldAlert, Award, ArrowLeft
 } from "lucide-react";
+import { getApiUrl } from "@/lib/api";
 
 interface ReportData {
   id: string;
@@ -54,7 +55,7 @@ export default function AnalysisReport() {
     async function loadReport() {
       try {
         const token = await getToken();
-        const apiBase = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api/v1";
+        const apiBase = getApiUrl();
         
         const r = await fetch(`${apiBase}/analyses/report/${id}`, {
           headers: { Authorization: `Bearer ${token}` }
@@ -83,7 +84,7 @@ export default function AnalysisReport() {
     
     try {
       const token = await getToken();
-      const apiBase = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api/v1";
+      const apiBase = getApiUrl();
       
       const r = await fetch(`${apiBase}/payments/checkout`, {
         method: "POST",
@@ -136,7 +137,7 @@ export default function AnalysisReport() {
     setPaymentLoading(true);
     try {
       const token = await getToken();
-      const apiBase = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api/v1";
+      const apiBase = getApiUrl();
       
       // If we haven't clicked check out yet, we generate a session first
       let activeOrder = orderId;

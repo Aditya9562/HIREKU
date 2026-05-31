@@ -5,6 +5,7 @@ import { useAuth, useUser } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, Users2, ShieldAlert, Calendar, Search } from "lucide-react";
+import { getApiUrl } from "../../../lib/api";
 
 interface UserDetail {
   id: string;
@@ -22,7 +23,12 @@ export default function AdminUsersPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  const isAdmin = isLoaded && isSignedIn && user?.primaryEmailAddress?.emailAddress?.toLowerCase() === "adityaputra.afendi@gmail.com";
+  const adminEmails = [
+    "adityaputra.afendi@gmail.com",
+    "adityaafendi02@gmail.com",
+    "adityaafendi22@gmail.com"
+  ];
+  const isAdmin = isLoaded && isSignedIn && adminEmails.includes(user?.primaryEmailAddress?.emailAddress?.toLowerCase() || "");
 
   useEffect(() => {
     if (isLoaded && !isAdmin) {
@@ -34,7 +40,7 @@ export default function AdminUsersPage() {
     async function loadUsers() {
       try {
         const token = await getToken();
-        const apiBase = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api/v1";
+        const apiBase = getApiUrl();
         
         const r = await fetch(`${apiBase}/admin/metrics`, {
           headers: { Authorization: `Bearer ${token}` }

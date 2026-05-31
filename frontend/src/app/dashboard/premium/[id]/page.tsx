@@ -7,6 +7,7 @@ import {
   Sparkles, FileText, CheckCircle2, Download, Copy, Check, 
   HelpCircle, ArrowLeft, Target, TrendingUp, AlertTriangle, Lightbulb
 } from "lucide-react";
+import { getApiUrl } from "@/lib/api";
 
 interface PremiumReportData {
   id: string;
@@ -79,7 +80,7 @@ export default function PremiumReport() {
     async function loadPremium() {
       try {
         const token = await getToken();
-        const apiBase = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api/v1";
+        const apiBase = getApiUrl();
         setLoadingStage("Claude Sonnet 4 is crafting your HR-expert CV package...");
         const r = await fetch(`${apiBase}/premium/generate/${id}`, {
           method: "POST",
