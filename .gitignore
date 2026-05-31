@@ -29,3 +29,5 @@ backend/local_storage/
 .env.production.local
 backend/.env
 frontend/.env
+.agents/
+skills-lock.json
