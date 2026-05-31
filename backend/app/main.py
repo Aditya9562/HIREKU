@@ -5,7 +5,11 @@ from app.database import engine, Base
 from app.routes import auth, resumes, analyses, payments, premium, admin, jobs
 
 # Create database tables automatically (for rapid local developer onboarding)
-Base.metadata.create_all(bind=engine)
+try:
+    Base.metadata.create_all(bind=engine)
+except Exception as db_err:
+    import logging
+    logging.getLogger("app.main").error(f"Failed to create database tables: {db_err}")
 
 import os
 
