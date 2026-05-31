@@ -6,8 +6,11 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-# Fallback local storage directory
-LOCAL_STORAGE_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "local_storage")
+# Fallback local storage directory (write to /tmp on Vercel)
+if os.getenv("VERCEL"):
+    LOCAL_STORAGE_DIR = "/tmp/local_storage"
+else:
+    LOCAL_STORAGE_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "local_storage")
 os.makedirs(LOCAL_STORAGE_DIR, exist_ok=True)
 
 class StorageService:

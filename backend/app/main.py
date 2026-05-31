@@ -7,12 +7,17 @@ from app.routes import auth, resumes, analyses, payments, premium, admin, jobs
 # Create database tables automatically (for rapid local developer onboarding)
 Base.metadata.create_all(bind=engine)
 
+import os
+
+root_path = "/_/backend" if os.getenv("VERCEL") else ""
+
 app = FastAPI(
     title="ResumeIQ API",
     description="Backend services for ResumeIQ resume analysis SaaS",
     version="1.0.0",
     docs_url="/docs" if settings.DEBUG else None,
-    redoc_url=None
+    redoc_url=None,
+    root_path=root_path
 )
 
 # CORS Policy configuration
