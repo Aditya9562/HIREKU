@@ -122,6 +122,7 @@ class ActiveUserDetail(BaseModel):
     email: str
     created_at: datetime
     is_admin: bool
+    premium_count: int
 
 class AdminMetrics(BaseModel):
     total_users: int

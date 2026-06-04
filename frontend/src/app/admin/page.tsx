@@ -25,7 +25,7 @@ interface MetricData {
   most_targeted_positions: Array<{ name: string; value: number }>;
   most_common_missing_skills: Array<{ name: string; value: number }>;
   daily_active_users: Array<{ date: string; users: number }>;
-  users_list: Array<{ id: string; email: string; created_at: string; is_admin: boolean }>;
+  users_list: Array<{ id: string; email: string; created_at: string; is_admin: boolean; premium_count: number }>;
 }
 
 export default function AdminDashboard() {
@@ -442,6 +442,7 @@ export default function AdminDashboard() {
                 <tr>
                   <th scope="col" className="px-6 py-3 font-semibold font-mono tracking-wider">User Profile</th>
                   <th scope="col" className="px-6 py-3 font-semibold font-mono tracking-wider">Role</th>
+                  <th scope="col" className="px-6 py-3 font-semibold font-mono tracking-wider">Premium CVs</th>
                   <th scope="col" className="px-6 py-3 font-semibold font-mono tracking-wider">Registration Date</th>
                   <th scope="col" className="px-6 py-3 font-semibold font-mono tracking-wider text-right">Actions</th>
                 </tr>
@@ -503,6 +504,15 @@ export default function AdminDashboard() {
                           <div className="text-[10px] font-mono text-muted-foreground">{u.id}</div>
                         </td>
                         <td className="px-6 py-3.5">{roleBadge}</td>
+                        <td className="px-6 py-3.5">
+                          <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold font-mono border ${
+                            u.premium_count > 0 
+                              ? "bg-amber-500/10 text-amber-600 border-amber-500/20" 
+                              : "bg-muted/40 text-muted-foreground border-transparent"
+                          }`}>
+                            👑 {u.premium_count} CV
+                          </span>
+                        </td>
                         <td className="px-6 py-3.5 text-xs text-muted-foreground font-mono">
                           <div className="flex items-center gap-1.5">
                             <Calendar className="w-3.5 h-3.5 text-muted-foreground" />

@@ -6,7 +6,7 @@ from typing import Dict, Any, List
 
 from app.database import get_db
 from app.auth import get_current_admin, get_current_super_admin
-from app.models import User, Resume, Analysis, Transaction, JobTarget
+from app.models import User, Resume, Analysis, Transaction, JobTarget, PremiumReport
 from app.schemas import AdminMetrics, ActiveUserDetail
 
 router = APIRouter(prefix="/admin", tags=["Admin Dashboard"])
@@ -119,14 +119,18 @@ def get_admin_metrics(
 
     # 8. User list
     all_users = db.query(User).order_by(User.created_at.desc()).limit(50).all()
-    users_list = [
-        ActiveUserDetail(
-            id=u.id,
-            email=u.email,
-            created_at=u.created_at,
-            is_admin=u.is_admin
-        ) for u in all_users
-    ]
+    users_list = []
+    for u in all_users:
+        p_count = db.query(PremiumReport).filter(PremiumReport.user_id == u.id).count()
+        users_list.append(
+            ActiveUserDetail(
+                id=u.id,
+                email=u.email,
+                created_at=u.created_at,
+                is_admin=u.is_admin,
+                premium_count=p_count
+            )
+        )
 
     return AdminMetrics(
         total_users=total_users,
