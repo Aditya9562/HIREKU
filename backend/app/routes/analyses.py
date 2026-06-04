@@ -107,7 +107,11 @@ def analyze_resume(
         scores = scoring_engine.calculate_scores(preproc_data)
 
         # 6. Request Gemini AI feedback (passing compact preprocessed JSON to save tokens)
-        ai_feedback = ai_service.generate_free_report(preproc_data["compact_summary"], target_dict)
+        ai_feedback = ai_service.generate_free_report(
+            preproc_data["compact_summary"],
+            target_dict,
+            language=target_data.language
+        )
 
         # Use dynamic scoring explanations from AI if available
         scoring_exps = ai_feedback.get("scoring_explanations")

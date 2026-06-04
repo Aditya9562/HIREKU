@@ -25,6 +25,7 @@ class JobTargetCreate(BaseModel):
     target_position: Optional[str] = None
     target_company: Optional[str] = None
     job_description: Optional[str] = None
+    language: Optional[str] = "en"
 
 class JobTargetResponse(BaseModel):
     id: str

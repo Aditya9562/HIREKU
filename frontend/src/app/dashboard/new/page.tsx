@@ -80,7 +80,8 @@ export default function NewAnalysis() {
       const targetPayload = {
         target_position: position || "General Professional",
         target_company: company || "Target Employer",
-        job_description: jd || ""
+        job_description: jd || "",
+        language: typeof window !== "undefined" ? window.navigator.language : "en"
       };
       
       // Stage 3: Querying AI

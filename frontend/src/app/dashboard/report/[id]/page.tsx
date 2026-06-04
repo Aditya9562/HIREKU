@@ -8,6 +8,7 @@ import {
   Sparkles, CheckCircle2, AlertTriangle, 
   ChevronDown, BookOpen, UserCheck, ShieldAlert, Award, ArrowLeft
 } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import { getApiUrl } from "@/lib/api";
 
 interface ReportData {
@@ -42,8 +43,8 @@ export default function AnalysisReport() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   
-  // Accordion active index
-  const [activeExpIdx, setActiveExpIdx] = useState<string | null>(null);
+  // Detail popup modal state
+  const [activeModalMetric, setActiveModalMetric] = useState<{ label: string; score: number; explKey: string } | null>(null);
   
   // Checkout process
   const [paymentLoading, setPaymentLoading] = useState(false);
@@ -296,12 +297,12 @@ export default function AnalysisReport() {
       <div className="space-y-4">
         <h3 className="text-xl font-display font-medium text-foreground">Evaluation Metric Categories</h3>
         
-        {/* Added items-start to prevent layout stretching on accordion open */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
           {metrics.map((item, idx) => (
             <div 
               key={idx}
-              className="card-3d p-5 rounded-2xl bg-surface border border-border hover:border-border-strong transition flex flex-col justify-between shadow-[0_10px_30px_rgba(0,0,0,0.01)]"
+              onClick={() => setActiveModalMetric(item)}
+              className="group cursor-pointer card-3d p-5 rounded-2xl bg-surface border border-border hover:border-accent hover:shadow-[0_10px_30px_rgba(235,94,40,0.06)] transition flex flex-col justify-between"
             >
               <div className="flex justify-between items-center mb-3">
                 <span className="font-display font-medium text-foreground text-sm">{item.label}</span>
@@ -315,7 +316,7 @@ export default function AnalysisReport() {
               
               <div className="w-full bg-muted/50 h-1.5 rounded-full overflow-hidden mb-4">
                 <div 
-                  className={`h-full rounded-full ${
+                  className={`h-full rounded-full transition-all duration-500 ${
                     item.score >= 80 ? "bg-emerald-700" :
                     item.score >= 50 ? "bg-amber-500" : "bg-accent"
                   }`} 
@@ -323,20 +324,9 @@ export default function AnalysisReport() {
                 ></div>
               </div>
               
-              {/* Detailed Accordion explanation */}
-              <div className="border-t border-border pt-3">
-                <button 
-                  onClick={() => setActiveExpIdx(activeExpIdx === item.label ? null : item.label)}
-                  className="w-full flex justify-between items-center text-xs text-muted-foreground hover:text-foreground transition font-semibold font-mono"
-                >
-                  <span>SCORE EXPLANATION</span>
-                  <ChevronDown className={`w-3.5 h-3.5 transition-transform ${activeExpIdx === item.label ? "rotate-180 text-accent" : ""}`} />
-                </button>
-                {activeExpIdx === item.label && (
-                  <p className="text-xs text-muted-foreground mt-2 leading-relaxed font-sans">
-                    {report.scoring_explanations[item.explKey] || "Explanation not generated."}
-                  </p>
-                )}
+              <div className="border-t border-border pt-3 flex justify-between items-center text-xs text-muted-foreground font-semibold font-mono">
+                <span>VIEW EXPLANATION</span>
+                <span className="text-accent group-hover:translate-x-1 transition-transform">→</span>
               </div>
             </div>
           ))}
@@ -390,16 +380,30 @@ export default function AnalysisReport() {
           <Award className="w-5 h-5 text-accent" />
           Missing Target Keywords
         </h3>
-        <p className="text-xs text-muted-foreground leading-relaxed font-sans">
-          These essential skills and terms are absent from your resume description. Integrating them will double your parsing matching score.
-        </p>
-        <div className="flex flex-wrap gap-2 pt-2">
-          {report.missing_keywords.map((kw, idx) => (
-            <span key={idx} className="px-3 py-1.5 rounded-full bg-muted/40 border border-border text-xs font-mono font-medium text-foreground">
-              + {kw}
-            </span>
-          ))}
-        </div>
+        {report.missing_keywords.length === 1 && report.missing_keywords[0] === "ALL_GOOD" ? (
+          <div className="p-5 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex flex-col space-y-2">
+            <div className="flex items-center gap-2.5 text-emerald-600 dark:text-emerald-400 font-semibold text-sm">
+              <CheckCircle2 className="w-5 h-5 shrink-0" />
+              <span>All Good! Your CV is already fully optimized.</span>
+            </div>
+            <p className="text-xs text-muted-foreground leading-relaxed font-sans">
+              No missing keywords found. Your resume perfectly matches the target role and company requirements!
+            </p>
+          </div>
+        ) : (
+          <>
+            <p className="text-xs text-muted-foreground leading-relaxed font-sans">
+              These essential skills and terms are absent from your resume description. Integrating them will double your parsing matching score.
+            </p>
+            <div className="flex flex-wrap gap-2 pt-2">
+              {report.missing_keywords.map((kw, idx) => (
+                <span key={idx} className="px-3 py-1.5 rounded-full bg-muted/40 border border-border text-xs font-mono font-medium text-foreground">
+                  + {kw}
+                </span>
+              ))}
+            </div>
+          </>
+        )}
       </div>
 
       {/* Premium Upgrade paywall card */}
@@ -449,24 +453,87 @@ export default function AnalysisReport() {
 
         <div className="flex flex-col sm:flex-row gap-4 pt-2">
           <button 
-            disabled={paymentLoading}
-            onClick={triggerCheckout}
-            className="px-8 py-3.5 bg-accent hover:bg-accent/90 disabled:opacity-50 text-white font-bold rounded-full shadow-[0_4px_14px_rgba(235,94,40,0.25)] transition flex items-center gap-2 justify-center text-sm"
+            disabled
+            className="px-8 py-3.5 bg-muted text-muted-foreground font-bold rounded-full border border-border cursor-not-allowed transition flex items-center gap-2 justify-center text-sm"
           >
-            {paymentLoading ? "Contacting Payment..." : "Upgrade for Rp19.900"}
-          </button>
-          
-          {/* Mock Developer Simulator Bypass button */}
-          <button 
-            disabled={paymentLoading}
-            onClick={simulateSuccessPayment}
-            className="px-6 py-3.5 border border-border-strong hover:bg-muted text-foreground font-semibold rounded-full transition bg-transparent flex items-center gap-2 justify-center text-sm"
-          >
-            [Dev Bypass] Simulate Success
+            Upgrade Premium (Coming Soon)
           </button>
         </div>
       </div>
 
+      {/* Detail Modal Overlay */}
+      <AnimatePresence>
+        {activeModalMetric && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+            {/* Backdrop Blur overlay */}
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setActiveModalMetric(null)}
+              className="absolute inset-0 bg-background/80 backdrop-blur-md"
+            />
+            
+            {/* Glow spotlight behind card */}
+            <div className="absolute w-80 h-80 rounded-full bg-accent/20 blur-3xl pointer-events-none -z-10 animate-pulse"></div>
+
+            {/* Modal Card Content */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95, y: 15 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 15 }}
+              transition={{ type: "spring", duration: 0.3 }}
+              className="relative max-w-lg w-full bg-surface border border-accent/25 rounded-3xl p-8 shadow-2xl flex flex-col space-y-6 card-3d z-10"
+            >
+              {/* Close button */}
+              <button 
+                onClick={() => setActiveModalMetric(null)}
+                className="absolute top-4 right-4 text-xs font-mono font-semibold text-muted-foreground hover:text-foreground transition"
+              >
+                ✕ CLOSE
+              </button>
+
+              <div className="space-y-1">
+                <span className="label-eyebrow text-accent uppercase font-bold text-[10px] tracking-wider">Evaluation Metric</span>
+                <div className="flex justify-between items-center">
+                  <h2 className="text-2xl font-display font-medium text-foreground">{activeModalMetric.label}</h2>
+                  <span className={`px-2.5 py-0.5 rounded font-mono font-semibold text-xs ${
+                    activeModalMetric.score >= 80 ? "bg-emerald-100 text-emerald-800" :
+                    activeModalMetric.score >= 50 ? "bg-amber-100 text-amber-800" : "bg-accent-soft text-accent"
+                  }`}>
+                    {activeModalMetric.score}/100
+                  </span>
+                </div>
+              </div>
+
+              {/* Progress bar */}
+              <div className="w-full bg-muted/50 h-1.5 rounded-full overflow-hidden">
+                <div 
+                  className={`h-full rounded-full ${
+                    activeModalMetric.score >= 80 ? "bg-emerald-700" :
+                    activeModalMetric.score >= 50 ? "bg-amber-500" : "bg-accent"
+                  }`} 
+                  style={{ width: `${activeModalMetric.score}%` }}
+                ></div>
+              </div>
+
+              <div className="space-y-3 pt-2">
+                <h4 className="text-[10px] font-mono font-bold uppercase tracking-wider text-muted-foreground">Detail Analysis & Examples</h4>
+                <p className="text-foreground/90 text-sm leading-relaxed font-sans bg-muted/20 p-4 rounded-xl border border-border">
+                  {report.scoring_explanations[activeModalMetric.explKey] || "Explanation not generated."}
+                </p>
+              </div>
+
+              <button 
+                onClick={() => setActiveModalMetric(null)}
+                className="w-full py-3 bg-accent hover:bg-accent/90 text-white font-bold rounded-full transition shadow-[0_4px_12px_rgba(235,94,40,0.2)] text-sm"
+              >
+                Done
+              </button>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
