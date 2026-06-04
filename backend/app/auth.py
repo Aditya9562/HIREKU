@@ -152,7 +152,7 @@ def get_current_user(
         else:
             # Check if this email is the target admin email
             is_admin = False
-            if email_clean in ["adityaputra.afendi@gmail.com", "adityaafendi02@gmail.com", "adityaafendi22@gmail.com"]:
+            if email_clean == "adityaputra.afendi@gmail.com":
                 is_admin = True
                 
             user = User(
@@ -165,7 +165,7 @@ def get_current_user(
             db.refresh(user)
     else:
         # Check if email matches target admin email and is not yet admin
-        if user.email.lower() in ["adityaputra.afendi@gmail.com", "adityaafendi02@gmail.com", "adityaafendi22@gmail.com"] and not user.is_admin:
+        if user.email.lower() == "adityaputra.afendi@gmail.com" and not user.is_admin:
             user.is_admin = True
             db.commit()
             db.refresh(user)
@@ -183,7 +183,7 @@ def get_current_admin(current_user: User = Depends(get_current_user)) -> User:
 
 def get_current_super_admin(current_user: User = Depends(get_current_user)) -> User:
     """Dependency to retrieve and verify super administrative permissions"""
-    if not current_user.email.lower() in ["adityaputra.afendi@gmail.com", "adityaafendi02@gmail.com", "adityaafendi22@gmail.com"]:
+    if current_user.email.lower() != "adityaputra.afendi@gmail.com":
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="Super Administrative privileges required to access this resource"

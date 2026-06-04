@@ -92,9 +92,7 @@ export default function UserProfilePage() {
                   <ShieldCheck className="w-3.5 h-3.5 text-primary-400" /> Admin Access
                 </span>
                 <span className="block text-white font-semibold">
-                  {["adityaputra.afendi@gmail.com", "adityaafendi02@gmail.com", "adityaafendi22@gmail.com"].includes(
-                    user?.primaryEmailAddress?.emailAddress?.toLowerCase() || ""
-                  ) ? "Granted" : "None"}
+                  {user?.primaryEmailAddress?.emailAddress?.toLowerCase() === "adityaputra.afendi@gmail.com" ? "Granted" : "None"}
                 </span>
               </div>
             </div>

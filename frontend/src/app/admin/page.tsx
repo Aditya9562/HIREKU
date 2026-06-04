@@ -66,12 +66,7 @@ export default function AdminDashboard() {
         }
         
         const profileData = await profileRes.json();
-        const superAdminEmails = [
-          "adityaputra.afendi@gmail.com",
-          "adityaafendi02@gmail.com",
-          "adityaafendi22@gmail.com"
-        ];
-        const isSuper = superAdminEmails.includes(user?.primaryEmailAddress?.emailAddress?.toLowerCase() || "");
+        const isSuper = user?.primaryEmailAddress?.emailAddress?.toLowerCase() === "adityaputra.afendi@gmail.com";
         
         if (!profileData.is_admin && !isSuper) {
           router.replace("/dashboard");
@@ -468,12 +463,7 @@ export default function AdminDashboard() {
                       minute: "2-digit"
                     });
 
-                    const superAdminEmails = [
-                      "adityaputra.afendi@gmail.com",
-                      "adityaafendi02@gmail.com",
-                      "adityaafendi22@gmail.com"
-                    ];
-                    const targetIsSuper = superAdminEmails.includes(u.email.toLowerCase());
+                    const targetIsSuper = u.email.toLowerCase() === "adityaputra.afendi@gmail.com";
                     const targetIsAdmin = u.is_admin || targetIsSuper;
 
                     let roleBadge = (

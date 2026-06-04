@@ -42,12 +42,7 @@ export default function Navbar() {
     }
   }, [isSignedIn, getToken]);
 
-  const superAdminEmails = [
-    "adityaputra.afendi@gmail.com",
-    "adityaafendi02@gmail.com",
-    "adityaafendi22@gmail.com"
-  ];
-  const isSuperAdmin = isSignedIn && superAdminEmails.includes(user?.primaryEmailAddress?.emailAddress?.toLowerCase() || "");
+  const isSuperAdmin = isSignedIn && (user?.primaryEmailAddress?.emailAddress?.toLowerCase() === "adityaputra.afendi@gmail.com");
   const isAdmin = isSuperAdmin || dbUser?.is_admin;
 
   // Scroll shadow

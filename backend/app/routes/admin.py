@@ -157,7 +157,7 @@ def promote_user(
     if not user:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="User not found")
         
-    is_super = user.email.lower() in ["adityaputra.afendi@gmail.com", "adityaafendi02@gmail.com", "adityaafendi22@gmail.com"]
+    is_super = user.email.lower() == "adityaputra.afendi@gmail.com"
     if is_super:
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Cannot modify a Super Admin account")
         
@@ -175,7 +175,7 @@ def demote_user(
     if not user:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="User not found")
         
-    is_super = user.email.lower() in ["adityaputra.afendi@gmail.com", "adityaafendi02@gmail.com", "adityaafendi22@gmail.com"]
+    is_super = user.email.lower() == "adityaputra.afendi@gmail.com"
     if is_super:
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Cannot modify a Super Admin account")
         
@@ -215,8 +215,8 @@ def delete_user(
     if not user:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="User not found")
         
-    target_is_super = user.email.lower() in ["adityaputra.afendi@gmail.com", "adityaafendi02@gmail.com", "adityaafendi22@gmail.com"]
-    current_is_super = current_admin.email.lower() in ["adityaputra.afendi@gmail.com", "adityaafendi02@gmail.com", "adityaafendi22@gmail.com"]
+    target_is_super = user.email.lower() == "adityaputra.afendi@gmail.com"
+    current_is_super = current_admin.email.lower() == "adityaputra.afendi@gmail.com"
     
     if target_is_super:
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Cannot delete a Super Admin account")
