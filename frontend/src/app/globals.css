@@ -198,9 +198,6 @@
   width: auto;
   object-fit: contain;
   user-select: none;
-  mix-blend-mode: multiply;
-  filter: grayscale(100%);
-  opacity: 0.6;
 }
 @media (min-width: 1024px) {
   .marquee-logo {
@@ -208,8 +205,7 @@
   }
 }
 .dark .marquee-logo {
-  mix-blend-mode: screen;
-  filter: invert(1) grayscale(100%) brightness(1.5);
+  /* Show original colored logo in dark mode */
 }
 
 /* === CARD INTERACTIONS === */
