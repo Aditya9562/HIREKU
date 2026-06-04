@@ -25,7 +25,7 @@ const companyLogos = [
   { name: "Telkom", src: "https://cdn.brandfetch.io/telkom.co.id" },
   { name: "Gojek", src: "https://cdn.brandfetch.io/gojek.com" },
   { name: "Tokopedia", src: "https://cdn.brandfetch.io/tokopedia.com" },
-  { name: "Shopee", src: "https://cdn.brandfetch.io/astra.co.id" },
+  { name: "Shopee", src: "https://cdn.brandfetch.io/shopee.co.id" },
   { name: "Bank Mandiri", src: "https://cdn.brandfetch.io/bankmandiri.co.id" },
   { name: "BCA", src: "https://cdn.brandfetch.io/bca.co.id" },
   { name: "Unilever", src: "https://cdn.brandfetch.io/unilever.com" },
@@ -463,7 +463,7 @@ export default function Home() {
                 <img
                   src={logo.src}
                   alt={logo.name}
-                  className="h-24 md:h-28 lg:h-32 w-auto object-contain select-none mix-blend-normal"
+                  className="marquee-logo"
                   draggable="false"
                   onError={(e) => {
                     // Fallback to text if logo fails to load

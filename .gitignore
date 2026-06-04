@@ -31,3 +31,6 @@ backend/.env
 frontend/.env
 .agents/
 skills-lock.json
+
+.vercel
+.env*

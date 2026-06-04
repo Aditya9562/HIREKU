@@ -35,9 +35,9 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        display: ['Fraunces', 'serif'],
-        mono: ['JetBrains Mono', 'monospace'],
+        sans: ['var(--font-inter)', 'sans-serif'],
+        display: ['var(--font-fraunces)', 'serif'],
+        mono: ['var(--font-jetbrains-mono)', 'monospace'],
       },
       borderRadius: {
         lg: 'var(--radius)',

@@ -1,8 +1,28 @@
 import type { Metadata } from "next";
 import { ClerkProvider } from "@clerk/nextjs";
 import Link from "next/link";
+import { Inter, Fraunces, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-fraunces",
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains-mono",
+  display: "swap",
+});
+
 
 export const metadata: Metadata = {
   title: "Hireku | Land Your Dream Job, Faster.",
@@ -18,14 +38,14 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className="antialiased min-h-screen flex flex-col bg-background text-foreground selection:bg-accent-soft selection:text-foreground">
+        <body className={`${inter.variable} ${fraunces.variable} ${jetbrainsMono.variable} antialiased min-h-screen flex flex-col bg-background text-foreground selection:bg-accent-soft selection:text-foreground`}>
           {/* Subtle background grid */}
           <div className="fixed inset-0 bg-grid-dots pointer-events-none z-0 opacity-60" />
 
           {/* Ambient orbs — soft, below navbar level */}
           <div className="fixed pointer-events-none z-0">
-            <div className="bg-orb animate-float-1 absolute top-[15vh] left-[-10vw] w-[min(60vw,600px)] h-[min(60vw,600px)] bg-[hsl(var(--accent)/0.08)] blur-[140px] rounded-full" />
-            <div className="bg-orb animate-float-2 absolute bottom-[-15vh] right-[-12vw] w-[min(70vw,700px)] h-[min(70vw,700px)] bg-[hsl(40,80%,65%,0.06)] blur-[150px] rounded-full" />
+            <div className="bg-orb md:animate-float-1 absolute top-[15vh] left-[-10vw] w-[min(60vw,600px)] h-[min(60vw,600px)] bg-[hsl(var(--accent)/0.08)] blur-[140px] rounded-full" />
+            <div className="bg-orb md:animate-float-2 absolute bottom-[-15vh] right-[-12vw] w-[min(70vw,700px)] h-[min(70vw,700px)] bg-[hsl(40,80%,65%,0.06)] blur-[150px] rounded-full" />
           </div>
 
           <Navbar />
