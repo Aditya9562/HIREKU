@@ -141,7 +141,11 @@ export default function Navbar() {
                     <Icon className="w-3.5 h-3.5" />
                     {label}
                     {pathname === href && (
-                      <span className="absolute -bottom-0.5 inset-x-0 h-[2px] bg-accent rounded-full" />
+                      <motion.span 
+                        layoutId="active-nav-underline"
+                        className="absolute -bottom-0.5 inset-x-0 h-[2px] bg-accent rounded-full"
+                        transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                      />
                     )}
                   </Link>
                 ))
@@ -157,7 +161,11 @@ export default function Navbar() {
                   >
                     {label}
                     {activeSection === id && isLanding && (
-                      <span className="absolute -bottom-0.5 inset-x-0 h-[2px] bg-accent rounded-full" />
+                      <motion.span 
+                        layoutId="active-nav-underline"
+                        className="absolute -bottom-0.5 inset-x-0 h-[2px] bg-accent rounded-full"
+                        transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                      />
                     )}
                   </Link>
                 ))}

@@ -336,19 +336,49 @@ class AIService:
         verb_count = stats.get("verb_count", 0)
         quantified_count = stats.get("quantified_achievements", 0)
         
-        is_tech = any(kw in target_role.lower() for kw in ["software", "engineer", "developer", "tech", "data", "programmer", "system"])
-        if is_tech:
-            missing_kws = ["Agile Methodologies", "CI/CD Pipelines", "System Architecture", "Performance Optimization"]
-            missing_sks = ["Docker & Containerization", "Automated QA Testing", "Analytical Dashboard Setup"]
-        elif any(kw in target_role.lower() for kw in ["recruiter", "hr", "human", "people", "talent"]):
-            missing_kws = ["Talent Acquisition", "Applicant Tracking Systems (ATS)", "HRIS Systems", "Structured Interviewing"]
-            missing_sks = ["Payroll Administration", "Onboarding Workflows", "Employee Relations Management"]
-        elif any(kw in target_role.lower() for kw in ["finance", "account", "audit", "banking"]):
-            missing_kws = ["Financial Reporting", "Auditing Principles", "IFRS Compliance", "General Ledger Audit"]
-            missing_sks = ["Taxation Policy", "Budget Forecasting Models", "Risk Mitigation Frameworks"]
+        target_role_lower = target_role.lower()
+        role_kws = []
+        
+        # Determine keywords list based on role
+        if "front" in target_role_lower or "react" in target_role_lower or "web" in target_role_lower:
+            role_kws = ["React", "Next.js", "TypeScript", "Tailwind CSS", "Redux", "Webpack", "UI/UX Design", "Responsive Web Design", "REST APIs", "Lighthouse Performance"]
+            missing_sks = ["Tailwind CSS Styling", "Component Optimization", "API State Integration"]
+        elif "back" in target_role_lower or "fastapi" in target_role_lower or "django" in target_role_lower or "python" in target_role_lower:
+            role_kws = ["Node.js", "FastAPI", "Python", "GoLang", "PostgreSQL", "Redis Caching", "Docker Containers", "RESTful APIs", "GraphQL", "System Design", "Microservices"]
+            missing_sks = ["Docker Containerization", "Database Normalization", "GraphQL Endpoint Design"]
+        elif "full" in target_role_lower or "stack" in target_role_lower or "dev" in target_role_lower:
+            role_kws = ["React", "Next.js", "Node.js", "TypeScript", "PostgreSQL", "Docker", "REST APIs", "System Architecture", "CI/CD Pipelines"]
+            missing_sks = ["Full-Stack Architecture", "DevOps Pipelines", "State Management"]
+        elif "product" in target_role_lower or "pm" in target_role_lower:
+            role_kws = ["Product Roadmap", "Agile/Scrum", "PRD Writing", "User Analytics", "Market Research", "Stakeholder Management", "A/B Testing", "SQL Data Analysis"]
+            missing_sks = ["PRD Documentation", "Agile Product Backlogs", "Metric Tracking Dashboards"]
+        elif "project" in target_role_lower or "scrum" in target_role_lower:
+            role_kws = ["Project Governance", "Sprint Planning", "Risk Management", "Budget Forecasting", "Stakeholder Communications", "Jira & Confluence"]
+            missing_sks = ["Jira Backlog Grooming", "Sprint Estimation Frameworks", "Stakeholder Dashboards"]
+        elif "data" in target_role_lower or "analyst" in target_role_lower or "machine" in target_role_lower:
+            role_kws = ["Python", "SQL Querying", "Pandas & NumPy", "Machine Learning", "Tableau Dashboards", "Power BI", "Data Modeling", "ETL Pipelines"]
+            missing_sks = ["ETL Pipeline Structuring", "Interactive Dashboard Setup", "Machine Learning Training"]
+        elif "recruiter" in target_role_lower or "hr" in target_role_lower or "human" in target_role_lower or "talent" in target_role_lower:
+            role_kws = ["Talent Sourcing", "HRIS Administration", "Applicant Tracking Systems (ATS)", "Onboarding Workflows", "Employee Relations", "Payroll Setup"]
+            missing_sks = ["ATS Management workflows", "HR Dashboard Audits", "Structured Interview Formats"]
+        elif "finance" in target_role_lower or "account" in target_role_lower or "audit" in target_role_lower:
+            role_kws = ["Financial Reporting", "IFRS Compliance", "General Ledger Audit", "Taxation Policy", "Budget Forecasting", "Risk Mitigation Frameworks"]
+            missing_sks = ["IFRS Compliance Audits", "Forecasting Financial Models", "Risk Analysis Frameworks"]
         else:
-            missing_kws = ["Project Governance", "Stakeholder Communications", "Process Standardization", "Strategic Roadmap"]
-            missing_sks = ["Operations Dashboard Setup", "Vendor Lifecycle Management", "Cross-Functional Coordination"]
+            role_kws = ["Strategic Roadmap", "Process Optimization", "Stakeholder Management", "Operations Dashboard", "Vendor Lifecycle Management", "Cross-Functional Coordination"]
+            missing_sks = ["Vendor Governance Audits", "Operations Workflow Design", "Cross-Functional Integration"]
+            
+        # Filter out keywords that the candidate already has in their skills
+        skills_lower = [s.lower() for s in skills]
+        missing_kws = []
+        for kw in role_kws:
+            kw_lower = kw.lower()
+            if not any(kw_lower in s for s in skills_lower):
+                missing_kws.append(kw)
+                
+        # If all keywords are already present, set missing to ["ALL_GOOD"]
+        if not missing_kws:
+            missing_kws = ["ALL_GOOD"]
             
         is_id = language and language.lower().startswith("id")
         
