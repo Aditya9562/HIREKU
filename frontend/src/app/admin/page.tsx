@@ -46,8 +46,7 @@ export default function AdminDashboard() {
   useEffect(() => {
     if (!isLoaded) return;
     if (!isSignedIn) {
-      setError("Unauthorized access. Administrative permissions required.");
-      setLoading(false);
+      router.replace("/");
       return;
     }
 
@@ -62,8 +61,7 @@ export default function AdminDashboard() {
         });
         
         if (!profileRes.ok) {
-          setError("Failed to verify administrative status.");
-          setLoading(false);
+          router.replace("/dashboard");
           return;
         }
         
@@ -76,8 +74,7 @@ export default function AdminDashboard() {
         const isSuper = superAdminEmails.includes(user?.primaryEmailAddress?.emailAddress?.toLowerCase() || "");
         
         if (!profileData.is_admin && !isSuper) {
-          setError("Unauthorized access. Administrative permissions required.");
-          setLoading(false);
+          router.replace("/dashboard");
           return;
         }
         
@@ -92,7 +89,8 @@ export default function AdminDashboard() {
           const data = await r.json();
           setMetrics(data);
         } else {
-          setError("Failed to load dashboard metrics. Ensure you are authorized.");
+          router.replace("/dashboard");
+          return;
         }
       } catch (err: any) {
         setError("Network connection failed.");
@@ -102,7 +100,7 @@ export default function AdminDashboard() {
     };
 
     loadMetrics();
-  }, [isLoaded, isSignedIn, getToken]);
+  }, [isLoaded, isSignedIn, getToken, router, user]);
 
   const handleResetLimit = async (userId: string) => {
     if (!window.confirm("Are you sure you want to reset the daily limit for this user?")) return;
