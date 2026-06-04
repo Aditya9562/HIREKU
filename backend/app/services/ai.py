@@ -106,7 +106,7 @@ class AIService:
             "  \"top_strengths\": [\"Strength 1 (easy to understand, creative, with concrete example from their CV)\", \"Strength 2\", \"Strength 3\"],\n"
             "  \"top_weaknesses\": [\"Weakness 1 (specific to their CV and target/recommended job, no generic templates)\", \"Weakness 2\", \"Weakness 3\"],\n"
             "  \"missing_keywords\": [\"Keyword 1\", \"Keyword 2\"],\n"
-            "  \"recruiter_impression\": \"See your resume through recruiter eyes: Be brutally honest, avoid any generic template language. Tailor it to the user's specific target role/company. If they have no target role/company, recommend a role they suit and explain why. Detail exactly how a real recruiter views this candidate's fit based only on their actual CV text.\",\n"
+            "  \"recruiter_impression\": \"See your resume through recruiter eyes: Be brutally honest, avoid any generic template language. POV: You are a senior recruiter at the target company (or general recruiter if none specified) speaking directly to the job seeker (use 'kamu' or 'you'/'your'/'CV-mu'). Evaluate their fit based only on their actual CV text. NEVER refer to the candidate in the 3rd person (do not use 'kandidat ini', 'kandidat tersebut', 'this candidate', 'pengalaman mereka', 'their experience').\",\n"
             "  \"job_match_score\": 75,\n"
             "  \"missing_skills\": [\"Skill 1\", \"Skill 2\"],\n"
             "  \"recommended_improvements\": [\"Improvement 1\", \"Improvement 2\"],\n"
@@ -121,10 +121,10 @@ class AIService:
             "}\n\n"
             "STRICT RULES FOR ALL FIELDS:\n"
             f"1. LANGUAGE: All output must be entirely in {lang_name}.\n"
-            "2. RECRUITER IMPRESSION: Do not use boilerplate or templates. Be brutally honest. If they targeted a company/role, evaluate their fit for that. If not, state what role fits them best and evaluate. Use a direct, sharp, professional tone.\n"
-            "3. SCORING EXPLANATIONS: Explain each metric in an extremely simple, clear, and creative way (like teaching a child, avoiding jargon), make it slightly longer/elaborated, and illustrate it with a direct example from their CV text. For instance, if they lack metrics, point out a specific line from their experience and show how to add a number to it.\n"
-            "4. TOP 3 STRENGTHS: Make them very easy to understand and provide a specific example of where this strength is shown in their CV.\n"
-            "5. TOP 3 CRITICAL WEAKNESSES: Must not be templates. Tailor them to the target job (or recommended job) and the candidate's actual CV gaps.\n"
+            "2. RECRUITER IMPRESSION: Do not use boilerplate or templates. Be brutally honest. Evaluate their fit. Speak directly to them in the 2nd person (use 'kamu' or 'you'/'your'/'CV-mu'). Never refer to the candidate as a 3rd person ('this candidate', 'kandidat ini', 'pengalaman mereka', 'their experience').\n"
+            "3. SCORING EXPLANATIONS: Explain each metric in an extremely simple, clear, and creative way (like teaching a child, avoiding jargon), make it slightly longer/elaborated, and illustrate it with a direct example from their CV text. For instance, if they lack metrics, point out a specific line from their experience and show how to add a number to it. Speak in the 2nd person directly to the user (use 'kamu' or 'you').\n"
+            "4. TOP 3 STRENGTHS: Make them very easy to understand and provide a specific example of where this strength is shown in their CV. Speak in the 2nd person directly to the user.\n"
+            "5. TOP 3 CRITICAL WEAKNESSES: Must not be templates. Tailor them to the target job (or recommended job) and the candidate's actual CV gaps. Speak in the 2nd person directly to the user.\n"
             "6. MISSING KEYWORDS: Match them to the target job or recommended job. If the CV is perfect and has zero missing keywords, return exactly [\"ALL_GOOD\"]. Otherwise, list the missing keywords.\n"
             "7. STRICT JSON: Do not include markdown fences in the response. Return ONLY valid JSON."
         )
@@ -327,6 +327,15 @@ class AIService:
         target_role = (job_target.get("target_position") or "General Professional") if job_target else "General Professional"
         target_company = (job_target.get("target_company") or "Target Employer") if job_target else "Target Employer"
         
+        # Safely extract dynamic preprocessor features
+        personal = preprocessed_json.get("personal", {})
+        has_linkedin = personal.get("has_linkedin", False)
+        has_portfolio = personal.get("has_portfolio", False)
+        
+        stats = preprocessed_json.get("stats", {})
+        verb_count = stats.get("verb_count", 0)
+        quantified_count = stats.get("quantified_achievements", 0)
+        
         is_tech = any(kw in target_role.lower() for kw in ["software", "engineer", "developer", "tech", "data", "programmer", "system"])
         if is_tech:
             missing_kws = ["Agile Methodologies", "CI/CD Pipelines", "System Architecture", "Performance Optimization"]
@@ -341,24 +350,83 @@ class AIService:
             missing_kws = ["Project Governance", "Stakeholder Communications", "Process Standardization", "Strategic Roadmap"]
             missing_sks = ["Operations Dashboard Setup", "Vendor Lifecycle Management", "Cross-Functional Coordination"]
             
-        if language and language.lower().startswith("id"):
+        is_id = language and language.lower().startswith("id")
+        
+        top_strengths = []
+        top_weaknesses = []
+        
+        # ── DYNAMIC STRENGTHS ──
+        if is_id:
+            top_strengths.append("Tata letak dan struktur informasi pendidikan serta keahlian utama kamu sudah tertata dengan rapi.")
+            if has_linkedin:
+                top_strengths.append("Sudah mencantumkan tautan LinkedIn aktif pada profil untuk memudahkan rekruter memverifikasi reputasi kamu secara daring.")
+            else:
+                top_strengths.append("Informasi kontak dasar seperti email dan nomor telepon sudah ditulis secara jelas di bagian atas.")
+                
+            if quantified_count >= 3:
+                top_strengths.append(f"Hebat! Kamu sudah menyertakan metrik berbasis angka ({quantified_count} metrik) untuk menggambarkan pencapaian di deskripsi kerja.")
+            else:
+                top_strengths.append("Menggunakan urutan pengalaman kerja kronologis mundur yang memudahkan pembacaan.")
+        else:
+            top_strengths.append("Your CV structure is neat, with education and key skills properly sectioned.")
+            if has_linkedin:
+                top_strengths.append("LinkedIn URL is included, providing direct social proof for recruiters.")
+            else:
+                top_strengths.append("Clear formatting of essential contact information like email and phone number.")
+                
+            if quantified_count >= 3:
+                top_strengths.append(f"Good job! You have included numerical metrics ({quantified_count} counts) to reflect your project impact.")
+            else:
+                top_strengths.append("Chronological format helps recruiters easily trace your career progression.")
+
+        # ── DYNAMIC WEAKNESSES ──
+        if is_id:
+            if not has_linkedin:
+                top_weaknesses.append("Kamu belum mencantumkan tautan LinkedIn pada header untuk memperkuat reputasi profesional.")
+            elif not has_portfolio:
+                top_weaknesses.append("Kamu belum menyertakan tautan portofolio eksternal untuk menunjukkan proyek nyata yang pernah kamu kerjakan.")
+            else:
+                top_weaknesses.append("Tautan kontak kamu sudah lengkap, namun posisi penempatannya bisa dibuat lebih menonjol di bagian header utama.")
+                
+            if quantified_count < 3:
+                top_weaknesses.append("Pencapaian berbasis angka sangat minim. Sebagian besar deskripsi pengalaman kerja kamu hanya menceritakan tugas harian.")
+            else:
+                top_weaknesses.append("Metrik angka sudah ada, namun kamu perlu memoles dampaknya agar langsung menunjukkan efisiensi atau profitabilitas bisnis.")
+                
+            if verb_count < 5:
+                top_weaknesses.append("Penggunaan kata kerja aktif yang kuat di awal deskripsi kerja kamu masih perlu ditingkatkan.")
+            else:
+                top_weaknesses.append("Kata kerja aktif sudah ada, tetapi variasi kosakatanya masih menggunakan kata yang berulang.")
+        else:
+            if not has_linkedin:
+                top_weaknesses.append("You haven't included a LinkedIn URL in your header to provide direct professional validation.")
+            elif not has_portfolio:
+                top_weaknesses.append("You haven't linked to an external portfolio to showcase evidence of your hands-on achievements.")
+            else:
+                top_weaknesses.append("Contact links are present, but their placement could be more visually prominent in the header.")
+                
+            if quantified_count < 3:
+                top_weaknesses.append("Lack of quantified metrics. Your bullet points focus on routine duties rather than measurable results.")
+            else:
+                top_weaknesses.append("Metrics are present but they could be refined to show greater organization-wide impact or scale.")
+                
+            if verb_count < 5:
+                top_weaknesses.append("Too few strong action verbs initiating bullet points in your work descriptions.")
+            else:
+                top_weaknesses.append("Action verbs are present, but your choice of words is somewhat repetitive.")
+
+        # ── RECRUITER IMPRESSION (2nd person POV) ──
+        if is_id:
             recruiter_imp = (
-                f"Kandidat ini menunjukkan fondasi yang solid di bidangnya, terutama dengan kualifikasi yang cocok untuk {target_role}. "
-                f"Pengalaman mereka menunjukkan keterampilan yang relevan seperti {', '.join(skills[:3]) if skills else 'eksekusi profesional'}. "
-                f"Namun, untuk menarik perhatian perusahaan besar seperti {target_company}, mereka harus mengubah CV mereka dari daftar tugas pasif "
-                f"menjadi lembar pencapaian yang kaya akan metrik angka. Strukturnya mudah dibaca, tetapi minimnya keyword target bisa membuat sistem filter melompati CV ini."
+                f"Saya melihat kamu memiliki fondasi yang cukup baik untuk peran {target_role}. "
+                f"Pengalaman kerja kamu berhasil menunjukkan keahlian yang relevan seperti {', '.join(skills[:3]) if skills else 'kemampuan eksekusi teknis'}. "
+                f"Namun, untuk bisa bersaing masuk ke perusahaan besar seperti {target_company}, kamu harus mengubah cara penyajian deskripsi kerja di CV-mu. "
+                f"Jangan hanya membuat daftar tugas rutin harian, tapi jelaskan dampak nyata hasil kerjamu menggunakan metrik angka. "
+                f"Secara struktur CV-mu mudah dibaca, tetapi minimnya keyword spesifik bisa membuat sistem screening ATS melewatkan profil kamu."
             )
             return {
-                "top_strengths": [
-                    "Struktur sangat baik dengan pembagian pendidikan dan keahlian yang jelas.",
-                    "Jejak keyword teknis yang baik, mencakup: " + ", ".join(skills[:3]) if skills else "istilah industri yang relevan",
-                    "Pengalaman kerja diurutkan secara kronologis mundur dengan rapi."
-                ],
-                "top_weaknesses": [
-                    "Sangat kurang dalam pencapaian berbasis metrik angka. Deskripsi pekerjaan hanya fokus pada tugas harian.",
-                    "Sedikit sekali kata kerja aktif yang kuat di awal poin deskripsi pekerjaan.",
-                    "Tidak mencantumkan tautan penting seperti portfolio atau LinkedIn untuk pembuktian sosial."
-                ],
+                "top_strengths": top_strengths,
+                "top_weaknesses": top_weaknesses,
                 "missing_keywords": missing_kws,
                 "recruiter_impression": recruiter_imp,
                 "job_match_score": 68,
@@ -379,22 +447,15 @@ class AIService:
             }
         else:
             recruiter_imp = (
-                f"The candidate displays a solid foundation in their field, especially with qualifications matching {target_role}. "
-                f"Their experience showcases relevant skills like {', '.join(skills[:3]) if skills else 'professional execution'}. "
-                f"However, to attract a top-tier employer like {target_company}, they need to transition their resume from a passive list of tasks "
-                f"to a metric-heavy impact sheet. The structure is readable, but the lack of target keywords might result in filters bypassing them."
+                f"I see you have a solid foundation matching the {target_role} position. "
+                f"Your experience showcases relevant skills like {', '.join(skills[:3]) if skills else 'professional execution'}. "
+                f"However, to stand out at a top-tier employer like {target_company}, you need to transition your resume from a list of tasks "
+                f"to a metric-heavy impact sheet. The structure is readable, but you need to weave in more targeted keywords to ensure "
+                f"ATS filters don't bypass your resume."
             )
             return {
-                "top_strengths": [
-                    "Strong structure with education and skills properly classified.",
-                    "Good technical keyword footprint including " + ", ".join(skills[:3]) if skills else "relevant industry terms",
-                    "Chronological experience listed in descending order."
-                ],
-                "top_weaknesses": [
-                    "Lacks quantified achievement achievements. Bullet points focus on duties rather than numeric impact.",
-                    "Few strong action verbs at the beginning of bullet points.",
-                    "Missing contact links like portfolio or LinkedIn to showcase social proof."
-                ],
+                "top_strengths": top_strengths,
+                "top_weaknesses": top_weaknesses,
                 "missing_keywords": missing_kws,
                 "recruiter_impression": recruiter_imp,
                 "job_match_score": 68,

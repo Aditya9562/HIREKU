@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { getApiUrl } from "@/lib/api";
+import { useTranslation } from "@/lib/i18n";
 
 interface ReportData {
   id: string;
@@ -38,6 +39,7 @@ export default function AnalysisReport() {
   const params = useParams();
   const router = useRouter();
   const id = params.id as string;
+  const { t, lang } = useTranslation();
 
   const [report, setReport] = useState<ReportData | null>(null);
   const [loading, setLoading] = useState(true);
@@ -203,12 +205,12 @@ export default function AnalysisReport() {
 
   // Define metric nodes for visual display
   const metrics = [
-    { label: "Structure", score: report.resume_structure_score, explKey: "resume_structure" },
-    { label: "Keywords", score: report.keyword_coverage_score, explKey: "keyword_coverage" },
-    { label: "Experience", score: report.experience_quality_score, explKey: "experience_quality" },
-    { label: "Achievements", score: report.achievement_strength_score, explKey: "achievement_strength" },
-    { label: "Skills Relevance", score: report.skills_relevance_score, explKey: "skills_relevance" },
-    { label: "HR Bot / AI Readability", score: report.readability_score, explKey: "readability" }
+    { label: lang === "id" ? "Struktur" : "Structure", score: report.resume_structure_score, explKey: "resume_structure" },
+    { label: lang === "id" ? "Kata Kunci" : "Keywords", score: report.keyword_coverage_score, explKey: "keyword_coverage" },
+    { label: lang === "id" ? "Kualitas Pengalaman" : "Experience", score: report.experience_quality_score, explKey: "experience_quality" },
+    { label: lang === "id" ? "Kekuatan Pencapaian" : "Achievements", score: report.achievement_strength_score, explKey: "achievement_strength" },
+    { label: lang === "id" ? "Relevansi Keahlian" : "Skills Relevance", score: report.skills_relevance_score, explKey: "skills_relevance" },
+    { label: lang === "id" ? "Keterbacaan HR Bot / AI" : "HR Bot / AI Readability", score: report.readability_score, explKey: "readability" }
   ];
 
   return (
@@ -228,17 +230,17 @@ export default function AnalysisReport() {
             onClick={() => router.push("/dashboard")}
             className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition font-semibold mb-2"
           >
-            <ArrowLeft className="w-3.5 h-3.5" /> Back to Dashboard
+            <ArrowLeft className="w-3.5 h-3.5" /> {t("report.back")}
           </button>
           
           <div className="label-eyebrow text-accent">
-            Hiring Readiness Assessment
+            {t("report.eyebrow")}
           </div>
           <h1 className="text-3xl sm:text-4xl font-medium text-foreground tracking-tight mt-1 font-display">
-            Audit Report Review
+            {t("report.title")}
           </h1>
           <p className="text-muted-foreground text-sm mt-1.5 font-mono">
-            Generated using Gemini Flash and rule-based preprocessing.
+            {t("report.subtitle")}
           </p>
         </div>
         
@@ -246,8 +248,8 @@ export default function AnalysisReport() {
         <div className="flex items-center gap-6 bg-surface p-5 rounded-2xl border border-accent/25 shadow-[0_8px_30px_rgb(235,94,40,0.06)] relative overflow-hidden card-3d">
           <div className="absolute top-0 right-0 w-24 h-24 bg-accent/5 rounded-full blur-2xl pointer-events-none"></div>
           <div>
-            <p className="label-eyebrow text-accent text-[10px] uppercase font-bold tracking-wider">Overall Score</p>
-            <p className="text-xs text-muted-foreground font-semibold mt-1">Deterministic Scorer</p>
+            <p className="label-eyebrow text-accent text-[10px] uppercase font-bold tracking-wider">{t("report.overall")}</p>
+            <p className="text-xs text-muted-foreground font-semibold mt-1">{t("report.scorer")}</p>
           </div>
           
           <div className="relative flex items-center justify-center shrink-0">
@@ -286,7 +288,7 @@ export default function AnalysisReport() {
         </div>
         <h3 className="text-lg font-display font-medium text-foreground flex items-center gap-1.5">
           <UserCheck className="w-5 h-5 text-accent" />
-          See your resume through recruiter eyes
+          {t("report.recruiter.title")}
         </h3>
         <p className="text-foreground/90 text-sm leading-relaxed max-w-4xl italic font-serif">
           "{report.recruiter_impression}"
@@ -295,7 +297,7 @@ export default function AnalysisReport() {
 
       {/* Scores Breakdown Grid */}
       <div className="space-y-4">
-        <h3 className="text-xl font-display font-medium text-foreground">Evaluation Metric Categories</h3>
+        <h3 className="text-xl font-display font-medium text-foreground">{t("report.categories")}</h3>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
           {metrics.map((item, idx) => (
@@ -325,7 +327,7 @@ export default function AnalysisReport() {
               </div>
               
               <div className="border-t border-border pt-3 flex justify-between items-center text-xs text-muted-foreground font-semibold font-mono">
-                <span>VIEW EXPLANATION</span>
+                <span>{lang === "id" ? "LIHAT PENJELASAN" : "VIEW EXPLANATION"}</span>
                 <span className="text-accent group-hover:translate-x-1 transition-transform">→</span>
               </div>
             </div>
@@ -340,7 +342,7 @@ export default function AnalysisReport() {
         <div className="p-6 rounded-2xl bg-surface border border-emerald-500/20 space-y-4 shadow-sm hover:shadow-md transition">
           <h3 className="text-lg font-display font-semibold text-emerald-600 dark:text-emerald-400 flex items-center gap-1.5">
             <CheckCircle2 className="w-5 h-5 text-emerald-500 dark:text-emerald-400" />
-            Top 3 Strengths
+            {t("report.strengths.title")}
           </h3>
           <ul className="space-y-3">
             {report.top_strengths.map((str, idx) => (
@@ -358,7 +360,7 @@ export default function AnalysisReport() {
         <div className="p-6 rounded-2xl bg-surface border border-accent/20 space-y-4 shadow-sm hover:shadow-md transition">
           <h3 className="text-lg font-display font-semibold text-accent dark:text-orange-400 flex items-center gap-1.5">
             <AlertTriangle className="w-5 h-5 text-accent dark:text-orange-400" />
-            Top 3 Critical Weaknesses
+            {t("report.weaknesses.title")}
           </h3>
           <ul className="space-y-3">
             {report.top_weaknesses.map((weak, idx) => (
@@ -378,22 +380,24 @@ export default function AnalysisReport() {
       <div className="p-6 rounded-2xl bg-surface border border-border space-y-4 shadow-sm">
         <h3 className="text-lg font-display font-medium text-foreground flex items-center gap-1.5">
           <Award className="w-5 h-5 text-accent" />
-          Missing Target Keywords
+          {t("report.keywords.title")}
         </h3>
         {report.missing_keywords.length === 1 && report.missing_keywords[0] === "ALL_GOOD" ? (
           <div className="p-5 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex flex-col space-y-2">
             <div className="flex items-center gap-2.5 text-emerald-600 dark:text-emerald-400 font-semibold text-sm">
               <CheckCircle2 className="w-5 h-5 shrink-0" />
-              <span>All Good! Your CV is already fully optimized.</span>
+              <span>{lang === "id" ? "Semua Bagus! CV kamu sudah sepenuhnya dioptimalkan." : "All Good! Your CV is already fully optimized."}</span>
             </div>
             <p className="text-xs text-muted-foreground leading-relaxed font-sans">
-              No missing keywords found. Your resume perfectly matches the target role and company requirements!
+              {lang === "id" 
+                ? "Tidak ditemukan kata kunci target yang hilang. Resume kamu sangat cocok dengan persyaratan posisi dan perusahaan!"
+                : "No missing keywords found. Your resume perfectly matches the target role and company requirements!"}
             </p>
           </div>
         ) : (
           <>
             <p className="text-xs text-muted-foreground leading-relaxed font-sans">
-              These essential skills and terms are absent from your resume description. Integrating them will double your parsing matching score.
+              {t("report.keywords.desc")}
             </p>
             <div className="flex flex-wrap gap-2 pt-2">
               {report.missing_keywords.map((kw, idx) => (
@@ -414,33 +418,32 @@ export default function AnalysisReport() {
         
         <div className="space-y-2 max-w-2xl">
           <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-accent-soft text-accent text-xs font-bold uppercase tracking-wider font-mono">
-            <Sparkles className="w-3.5 h-3.5" /> Premium Optimization
+            <Sparkles className="w-3.5 h-3.5" /> {t("report.upgrade.eyebrow")}
           </div>
           <h2 className="text-2xl md:text-3xl font-display font-medium text-foreground">
-            Your resume can be improved.
+            {t("report.upgrade.title")}
           </h2>
           <p className="text-muted-foreground text-sm leading-relaxed max-w-xl font-sans">
-            Upgrade your resume audit to the Premium Tier. Let Claude 3.5 Sonnet perform a deep rewrite, 
-            optimize achievements with impact metrics, draft a tailored cover letter, and provide downloadable PDFs.
+            {t("report.upgrade.desc")}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-foreground/80 max-w-lg font-sans border-t border-border pt-6">
           <div className="flex items-center gap-2">
             <CheckCircle2 className="w-4 h-4 text-accent shrink-0" />
-            <span>Claude 3.5 Results-oriented rewrite</span>
+            <span>{t("report.upgrade.feat1")}</span>
           </div>
           <div className="flex items-center gap-2">
             <CheckCircle2 className="w-4 h-4 text-accent shrink-0" />
-            <span>ATS-friendly PDF & Letter downloads</span>
+            <span>{t("report.upgrade.feat2")}</span>
           </div>
           <div className="flex items-center gap-2">
             <CheckCircle2 className="w-4 h-4 text-accent shrink-0" />
-            <span>Targeted Cover Letter draft</span>
+            <span>{t("report.upgrade.feat3")}</span>
           </div>
           <div className="flex items-center gap-2">
             <CheckCircle2 className="w-4 h-4 text-accent shrink-0" />
-            <span>15 custom Interview Prep questions</span>
+            <span>{t("report.upgrade.feat4")}</span>
           </div>
         </div>
 
@@ -456,7 +459,7 @@ export default function AnalysisReport() {
             disabled
             className="px-8 py-3.5 bg-muted text-muted-foreground font-bold rounded-full border border-border cursor-not-allowed transition flex items-center gap-2 justify-center text-sm"
           >
-            Upgrade Premium (Coming Soon)
+            {lang === "id" ? "Upgrade Premium (Segera Hadir)" : "Upgrade Premium (Coming Soon)"}
           </button>
         </div>
       </div>
@@ -490,11 +493,13 @@ export default function AnalysisReport() {
                 onClick={() => setActiveModalMetric(null)}
                 className="absolute top-4 right-4 text-xs font-mono font-semibold text-muted-foreground hover:text-foreground transition"
               >
-                ✕ CLOSE
+                ✕ {lang === "id" ? "TUTUP" : "CLOSE"}
               </button>
 
               <div className="space-y-1">
-                <span className="label-eyebrow text-accent uppercase font-bold text-[10px] tracking-wider">Evaluation Metric</span>
+                <span className="label-eyebrow text-accent uppercase font-bold text-[10px] tracking-wider">
+                  {lang === "id" ? "Metrik Evaluasi" : "Evaluation Metric"}
+                </span>
                 <div className="flex justify-between items-center">
                   <h2 className="text-2xl font-display font-medium text-foreground">{activeModalMetric.label}</h2>
                   <span className={`px-2.5 py-0.5 rounded font-mono font-semibold text-xs ${
@@ -518,7 +523,9 @@ export default function AnalysisReport() {
               </div>
 
               <div className="space-y-3 pt-2">
-                <h4 className="text-[10px] font-mono font-bold uppercase tracking-wider text-muted-foreground">Detail Analysis & Examples</h4>
+                <h4 className="text-[10px] font-mono font-bold uppercase tracking-wider text-muted-foreground">
+                  {lang === "id" ? "Analisis Detail & Contoh" : "Detail Analysis & Examples"}
+                </h4>
                 <p className="text-foreground/90 text-sm leading-relaxed font-sans bg-muted/20 p-4 rounded-xl border border-border">
                   {report.scoring_explanations[activeModalMetric.explKey] || "Explanation not generated."}
                 </p>
@@ -528,7 +535,7 @@ export default function AnalysisReport() {
                 onClick={() => setActiveModalMetric(null)}
                 className="w-full py-3 bg-accent hover:bg-accent/90 text-white font-bold rounded-full transition shadow-[0_4px_12px_rgba(235,94,40,0.2)] text-sm"
               >
-                Done
+                {lang === "id" ? "Selesai" : "Done"}
               </button>
             </motion.div>
           </div>
