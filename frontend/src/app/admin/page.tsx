@@ -7,7 +7,8 @@ import Link from "next/link";
 import { getApiUrl } from "../../lib/api";
 import { 
   Users, BarChart3, TrendingUp, DollarSign, Upload, 
-  ShieldAlert, Users2, ChevronRight, Activity, ArrowLeft 
+  ShieldAlert, Users2, ChevronRight, Activity, ArrowLeft,
+  Search, Calendar
 } from "lucide-react";
 import { 
   ResponsiveContainer, AreaChart, Area, XAxis, YAxis, 
@@ -24,7 +25,7 @@ interface MetricData {
   most_targeted_positions: Array<{ name: string; value: number }>;
   most_common_missing_skills: Array<{ name: string; value: number }>;
   daily_active_users: Array<{ date: string; users: number }>;
-  users_list: Array<{ id: string; email: string; created_at: string }>;
+  users_list: Array<{ id: string; email: string; created_at: string; is_admin: boolean }>;
 }
 
 export default function AdminDashboard() {
@@ -37,6 +38,10 @@ export default function AdminDashboard() {
   const [error, setError] = useState("");
 
   const [isAdmin, setIsAdmin] = useState(false);
+  const [isSuperAdmin, setIsSuperAdmin] = useState(false);
+  const [search, setSearch] = useState("");
+  const [actionLoading, setActionLoading] = useState<string | null>(null);
+  const [successMsg, setSuccessMsg] = useState("");
 
   useEffect(() => {
     if (!isLoaded) return;
@@ -77,6 +82,7 @@ export default function AdminDashboard() {
         }
         
         setIsAdmin(true);
+        setIsSuperAdmin(isSuper);
 
         const r = await fetch(`${apiBase}/admin/metrics`, {
           headers: { Authorization: `Bearer ${token}` }
@@ -97,6 +103,110 @@ export default function AdminDashboard() {
 
     loadMetrics();
   }, [isLoaded, isSignedIn, getToken]);
+
+  const handleResetLimit = async (userId: string) => {
+    if (!window.confirm("Are you sure you want to reset the daily limit for this user?")) return;
+    setActionLoading(userId);
+    setSuccessMsg("");
+    try {
+      const token = await getToken();
+      const r = await fetch(`${getApiUrl()}/admin/users/${userId}/reset-limit`, {
+        method: "POST",
+        headers: { Authorization: `Bearer ${token}` }
+      });
+      if (r.ok) {
+        setSuccessMsg("User scan limit has been successfully reset!");
+      } else {
+        const err = await r.json();
+        alert(err.detail || "Failed to reset limit.");
+      }
+    } catch (e) {
+      alert("Network error.");
+    } finally {
+      setActionLoading(null);
+    }
+  };
+
+  const handlePromote = async (userId: string) => {
+    if (!window.confirm("Promote this user to Admin?")) return;
+    setActionLoading(userId);
+    setSuccessMsg("");
+    try {
+      const token = await getToken();
+      const r = await fetch(`${getApiUrl()}/admin/users/${userId}/promote`, {
+        method: "POST",
+        headers: { Authorization: `Bearer ${token}` }
+      });
+      if (r.ok) {
+        setSuccessMsg("User promoted to Admin successfully!");
+        setMetrics(prev => prev ? {
+          ...prev,
+          users_list: prev.users_list.map(u => u.id === userId ? { ...u, is_admin: true } : u)
+        } : null);
+      } else {
+        const err = await r.json();
+        alert(err.detail || "Failed to promote user.");
+      }
+    } catch (e) {
+      alert("Network error.");
+    } finally {
+      setActionLoading(null);
+    }
+  };
+
+  const handleDemote = async (userId: string) => {
+    if (!window.confirm("Demote this Admin back to regular user?")) return;
+    setActionLoading(userId);
+    setSuccessMsg("");
+    try {
+      const token = await getToken();
+      const r = await fetch(`${getApiUrl()}/admin/users/${userId}/demote`, {
+        method: "POST",
+        headers: { Authorization: `Bearer ${token}` }
+      });
+      if (r.ok) {
+        setSuccessMsg("Admin demoted to regular user successfully.");
+        setMetrics(prev => prev ? {
+          ...prev,
+          users_list: prev.users_list.map(u => u.id === userId ? { ...u, is_admin: false } : u)
+        } : null);
+      } else {
+        const err = await r.json();
+        alert(err.detail || "Failed to demote user.");
+      }
+    } catch (e) {
+      alert("Network error.");
+    } finally {
+      setActionLoading(null);
+    }
+  };
+
+  const handleDelete = async (userId: string) => {
+    if (!window.confirm("WARNING: Deleting this user will permanently remove all their CVs, reports, and data. Proceed?")) return;
+    setActionLoading(userId);
+    setSuccessMsg("");
+    try {
+      const token = await getToken();
+      const r = await fetch(`${getApiUrl()}/admin/users/${userId}`, {
+        method: "DELETE",
+        headers: { Authorization: `Bearer ${token}` }
+      });
+      if (r.ok) {
+        setSuccessMsg("User account deleted successfully.");
+        setMetrics(prev => prev ? {
+          ...prev,
+          users_list: prev.users_list.filter(u => u.id !== userId)
+        } : null);
+      } else {
+        const err = await r.json();
+        alert(err.detail || "Failed to delete user.");
+      }
+    } catch (e) {
+      alert("Network error.");
+    } finally {
+      setActionLoading(null);
+    }
+  };
 
   if (loading) {
     return (
@@ -149,12 +259,12 @@ export default function AdminDashboard() {
           </h1>
           <p className="text-muted-foreground text-sm mt-1.5 font-sans">Real-time SaaS conversion, revenue, and usage logs.</p>
         </div>
-        <Link 
-          href="/admin/users"
+        <button 
+          onClick={() => document.getElementById("user-directory")?.scrollIntoView({ behavior: "smooth" })}
           className="inline-flex items-center gap-1 px-4 py-2 text-xs font-semibold text-foreground bg-surface border border-border-strong rounded-full transition-all hover:bg-muted"
         >
-          Manage Users <ChevronRight className="w-4 h-4" />
-        </Link>
+          Manage Users <ChevronRight className="w-4 h-4 rotate-90" />
+        </button>
       </div>
 
       {/* Metrics Row */}
@@ -292,37 +402,163 @@ export default function AdminDashboard() {
         </div>
       )}
 
-      {/* Recent Signed Up Users List */}
+      {/* User Accounts Directory with Search and Administrative Operations */}
       {metrics && (
-        <div className="p-6 rounded-2xl bg-surface border border-border space-y-4 shadow-sm">
-          <h3 className="text-lg font-display font-medium text-foreground">Recent User Sign Ups</h3>
-          
+        <div id="user-directory" className="p-6 rounded-2xl bg-surface border border-border space-y-6 shadow-sm scroll-mt-20">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+            <div>
+              <h3 className="text-xl font-display font-medium text-foreground flex items-center gap-2">
+                <Users2 className="w-6 h-6 text-accent" />
+                User Accounts Directory
+              </h3>
+              <p className="text-xs text-muted-foreground mt-0.5">Search, monitor, reset limits, promote, and delete job seeker profiles.</p>
+            </div>
+            
+            {/* Search filter */}
+            <div className="relative w-full md:w-80">
+              <span className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-muted-foreground">
+                <Search className="w-3.5 h-3.5" />
+              </span>
+              <input 
+                type="text"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                placeholder="Filter by email or Clerk ID..."
+                className="w-full pl-9 pr-4 py-2 rounded-xl bg-background border border-border text-foreground focus:border-accent outline-none transition text-xs font-semibold"
+              />
+            </div>
+          </div>
+
+          {/* Success Notification */}
+          {successMsg && (
+            <div className="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 text-sm font-medium animate-fade-in">
+              {successMsg}
+            </div>
+          )}
+
           <div className="overflow-x-auto rounded-xl border border-border bg-background/50">
             <table className="w-full text-sm text-left text-foreground/90">
               <thead className="text-xs text-muted-foreground uppercase bg-muted/30 border-b border-border">
                 <tr>
-                  <th scope="col" className="px-6 py-3 font-semibold font-mono tracking-wider">User Email</th>
-                  <th scope="col" className="px-6 py-3 font-semibold font-mono tracking-wider">Clerk User ID</th>
-                  <th scope="col" className="px-6 py-3 font-semibold font-mono tracking-wider">Created At</th>
+                  <th scope="col" className="px-6 py-3 font-semibold font-mono tracking-wider">User Profile</th>
+                  <th scope="col" className="px-6 py-3 font-semibold font-mono tracking-wider">Role</th>
+                  <th scope="col" className="px-6 py-3 font-semibold font-mono tracking-wider">Registration Date</th>
+                  <th scope="col" className="px-6 py-3 font-semibold font-mono tracking-wider text-right">Actions</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-border">
-                {metrics.users_list.map((u) => {
-                  const dateStr = new Date(u.created_at).toLocaleDateString("en-US", {
-                    month: "short",
-                    day: "numeric",
-                    year: "numeric",
-                    hour: "2-digit",
-                    minute: "2-digit"
-                  });
-                  return (
-                    <tr key={u.id} className="hover:bg-muted/40 transition">
-                      <td className="px-6 py-3.5 font-semibold text-foreground">{u.email}</td>
-                      <td className="px-6 py-3.5 font-mono text-xs text-muted-foreground">{u.id}</td>
-                      <td className="px-6 py-3.5 text-xs text-muted-foreground font-mono">{dateStr}</td>
-                    </tr>
-                  );
-                })}
+                {metrics.users_list.filter(u => 
+                  u.email.toLowerCase().includes(search.toLowerCase()) || 
+                  u.id.toLowerCase().includes(search.toLowerCase())
+                ).length === 0 ? (
+                  <tr>
+                    <td colSpan={4} className="px-6 py-8 text-center text-muted-foreground text-xs font-mono">
+                      No users matching criteria.
+                    </td>
+                  </tr>
+                ) : (
+                  metrics.users_list.filter(u => 
+                    u.email.toLowerCase().includes(search.toLowerCase()) || 
+                    u.id.toLowerCase().includes(search.toLowerCase())
+                  ).map((u) => {
+                    const dateStr = new Date(u.created_at).toLocaleDateString("en-US", {
+                      month: "short",
+                      day: "numeric",
+                      year: "numeric",
+                      hour: "2-digit",
+                      minute: "2-digit"
+                    });
+
+                    const superAdminEmails = [
+                      "adityaputra.afendi@gmail.com",
+                      "adityaafendi02@gmail.com",
+                      "adityaafendi22@gmail.com"
+                    ];
+                    const targetIsSuper = superAdminEmails.includes(u.email.toLowerCase());
+                    const targetIsAdmin = u.is_admin || targetIsSuper;
+
+                    let roleBadge = (
+                      <span className="px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-muted text-muted-foreground font-mono">
+                        USER
+                      </span>
+                    );
+                    if (targetIsSuper) {
+                      roleBadge = (
+                        <span className="px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-orange-500/10 text-orange-600 border border-orange-500/20 font-mono">
+                          SUPER ADMIN
+                        </span>
+                      );
+                    } else if (u.is_admin) {
+                      roleBadge = (
+                        <span className="px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-blue-500/10 text-blue-600 border border-blue-500/20 font-mono">
+                          ADMIN
+                        </span>
+                      );
+                    }
+
+                    return (
+                      <tr key={u.id} className="hover:bg-muted/40 transition">
+                        <td className="px-6 py-3.5">
+                          <div className="font-semibold text-foreground">{u.email}</div>
+                          <div className="text-[10px] font-mono text-muted-foreground">{u.id}</div>
+                        </td>
+                        <td className="px-6 py-3.5">{roleBadge}</td>
+                        <td className="px-6 py-3.5 text-xs text-muted-foreground font-mono">
+                          <div className="flex items-center gap-1.5">
+                            <Calendar className="w-3.5 h-3.5 text-muted-foreground" />
+                            {dateStr}
+                          </div>
+                        </td>
+                        <td className="px-6 py-3.5 text-right">
+                          <div className="flex items-center justify-end gap-2">
+                            {/* Reset limit button (visible for regular users/admins, not super admin) */}
+                            {!targetIsSuper && (
+                              <button
+                                onClick={() => handleResetLimit(u.id)}
+                                disabled={actionLoading === u.id}
+                                className="px-2.5 py-1 text-[11px] font-semibold font-mono bg-teal-500/10 hover:bg-teal-500/20 text-teal-600 border border-teal-500/25 rounded-md transition disabled:opacity-50"
+                              >
+                                Reset Limit
+                              </button>
+                            )}
+
+                            {/* Promote/demote button (visible ONLY to Super Admin) */}
+                            {isSuperAdmin && !targetIsSuper && (
+                              u.is_admin ? (
+                                <button
+                                  onClick={() => handleDemote(u.id)}
+                                  disabled={actionLoading === u.id}
+                                  className="px-2.5 py-1 text-[11px] font-semibold font-mono bg-amber-500/10 hover:bg-amber-500/20 text-amber-600 border border-amber-500/25 rounded-md transition disabled:opacity-50"
+                                >
+                                  Demote
+                                </button>
+                              ) : (
+                                <button
+                                  onClick={() => handlePromote(u.id)}
+                                  disabled={actionLoading === u.id}
+                                  className="px-2.5 py-1 text-[11px] font-semibold font-mono bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-600 border border-indigo-500/25 rounded-md transition disabled:opacity-50"
+                                >
+                                  Promote
+                                </button>
+                              )
+                            )}
+
+                            {/* Delete button */}
+                            {!targetIsSuper && (!targetIsAdmin || isSuperAdmin) && (
+                              <button
+                                onClick={() => handleDelete(u.id)}
+                                disabled={actionLoading === u.id}
+                                className="px-2.5 py-1 text-[11px] font-semibold font-mono bg-red-500/10 hover:bg-red-500/20 text-red-600 border border-red-500/25 rounded-md transition disabled:opacity-50"
+                              >
+                                Delete
+                              </button>
+                            )}
+                          </div>
+                        </td>
+                      </tr>
+                    );
+                  })
+                )}
               </tbody>
             </table>
           </div>
