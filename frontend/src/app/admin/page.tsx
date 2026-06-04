@@ -36,25 +36,48 @@ export default function AdminDashboard() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  const adminEmails = [
-    "adityaputra.afendi@gmail.com",
-    "adityaafendi02@gmail.com",
-    "adityaafendi22@gmail.com"
-  ];
-  const isAdmin = isLoaded && isSignedIn && adminEmails.includes(user?.primaryEmailAddress?.emailAddress?.toLowerCase() || "");
+  const [isAdmin, setIsAdmin] = useState(false);
 
   useEffect(() => {
-    if (isLoaded && !isAdmin) {
+    if (!isLoaded) return;
+    if (!isSignedIn) {
       setError("Unauthorized access. Administrative permissions required.");
       setLoading(false);
       return;
     }
 
-    async function loadMetrics() {
+    const loadMetrics = async () => {
       try {
         const token = await getToken();
         const apiBase = getApiUrl();
         
+        // Verify admin status from backend profile
+        const profileRes = await fetch(`${apiBase}/auth/profile`, {
+          headers: { Authorization: `Bearer ${token}` }
+        });
+        
+        if (!profileRes.ok) {
+          setError("Failed to verify administrative status.");
+          setLoading(false);
+          return;
+        }
+        
+        const profileData = await profileRes.json();
+        const superAdminEmails = [
+          "adityaputra.afendi@gmail.com",
+          "adityaafendi02@gmail.com",
+          "adityaafendi22@gmail.com"
+        ];
+        const isSuper = superAdminEmails.includes(user?.primaryEmailAddress?.emailAddress?.toLowerCase() || "");
+        
+        if (!profileData.is_admin && !isSuper) {
+          setError("Unauthorized access. Administrative permissions required.");
+          setLoading(false);
+          return;
+        }
+        
+        setIsAdmin(true);
+
         const r = await fetch(`${apiBase}/admin/metrics`, {
           headers: { Authorization: `Bearer ${token}` }
         });
@@ -70,12 +93,10 @@ export default function AdminDashboard() {
       } finally {
         setLoading(false);
       }
-    }
+    };
 
-    if (isLoaded && isAdmin) {
-      loadMetrics();
-    }
-  }, [isLoaded, isSignedIn, isAdmin, getToken]);
+    loadMetrics();
+  }, [isLoaded, isSignedIn, getToken]);
 
   if (loading) {
     return (

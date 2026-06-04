@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 from typing import Dict, Any, List
 
 from app.database import get_db
-from app.auth import get_current_admin
+from app.auth import get_current_admin, get_current_super_admin
 from app.models import User, Resume, Analysis, Transaction, JobTarget
 from app.schemas import AdminMetrics, ActiveUserDetail
 
@@ -123,7 +123,8 @@ def get_admin_metrics(
         ActiveUserDetail(
             id=u.id,
             email=u.email,
-            created_at=u.created_at
+            created_at=u.created_at,
+            is_admin=u.is_admin
         ) for u in all_users
     ]
 
@@ -139,3 +140,96 @@ def get_admin_metrics(
         daily_active_users=daily_active_users,
         users_list=users_list
     )
+
+# ─── Administrative Action Endpoints ──────────────────────────────────────────
+
+@router.post("/users/{user_id}/promote")
+def promote_user(
+    user_id: str,
+    db: Session = Depends(get_db),
+    current_super_admin: User = Depends(get_current_super_admin)
+):
+    user = db.query(User).filter(User.id == user_id).first()
+    if not user:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="User not found")
+        
+    is_super = user.email.lower() in ["adityaputra.afendi@gmail.com", "adityaafendi02@gmail.com", "adityaafendi22@gmail.com"]
+    if is_super:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Cannot modify a Super Admin account")
+        
+    user.is_admin = True
+    db.commit()
+    return {"message": f"User {user.email} promoted to Admin successfully"}
+
+@router.post("/users/{user_id}/demote")
+def demote_user(
+    user_id: str,
+    db: Session = Depends(get_db),
+    current_super_admin: User = Depends(get_current_super_admin)
+):
+    user = db.query(User).filter(User.id == user_id).first()
+    if not user:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="User not found")
+        
+    is_super = user.email.lower() in ["adityaputra.afendi@gmail.com", "adityaafendi02@gmail.com", "adityaafendi22@gmail.com"]
+    if is_super:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Cannot modify a Super Admin account")
+        
+    user.is_admin = False
+    db.commit()
+    return {"message": f"Admin {user.email} demoted to regular user successfully"}
+
+@router.post("/users/{user_id}/reset-limit")
+def reset_user_limit(
+    user_id: str,
+    db: Session = Depends(get_db),
+    current_admin: User = Depends(get_current_admin)
+):
+    user = db.query(User).filter(User.id == user_id).first()
+    if not user:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="User not found")
+        
+    day_ago = datetime.utcnow() - timedelta(days=1)
+    recent_analyses = db.query(Analysis).join(Resume).filter(
+        Resume.user_id == user_id,
+        Analysis.created_at >= day_ago
+    ).all()
+    
+    for analysis in recent_analyses:
+        analysis.created_at = analysis.created_at - timedelta(days=1, minutes=1)
+        
+    db.commit()
+    return {"message": f"Daily limit for user {user.email} reset successfully"}
+
+@router.delete("/users/{user_id}")
+def delete_user(
+    user_id: str,
+    db: Session = Depends(get_db),
+    current_admin: User = Depends(get_current_admin)
+):
+    user = db.query(User).filter(User.id == user_id).first()
+    if not user:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="User not found")
+        
+    target_is_super = user.email.lower() in ["adityaputra.afendi@gmail.com", "adityaafendi02@gmail.com", "adityaafendi22@gmail.com"]
+    current_is_super = current_admin.email.lower() in ["adityaputra.afendi@gmail.com", "adityaafendi02@gmail.com", "adityaafendi22@gmail.com"]
+    
+    if target_is_super:
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Cannot delete a Super Admin account")
+        
+    if user.is_admin and not current_is_super:
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Only Super Admins can delete Admin accounts")
+        
+    # Get all resumes for user to clean up local storage files first
+    resumes = db.query(Resume).filter(Resume.user_id == user_id).all()
+    from app.services.storage import storage_service
+    for r in resumes:
+        try:
+            storage_service.delete_file(r.storage_path)
+        except Exception:
+            pass
+            
+    db.delete(user)
+    db.commit()
+    return {"message": f"User {user.email} deleted successfully"}
+

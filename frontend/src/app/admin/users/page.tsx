@@ -11,6 +11,7 @@ interface UserDetail {
   id: string;
   email: string;
   created_at: string;
+  is_admin: boolean;
 }
 
 export default function AdminUsersPage() {
@@ -22,26 +23,52 @@ export default function AdminUsersPage() {
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-
-  const adminEmails = [
-    "adityaputra.afendi@gmail.com",
-    "adityaafendi02@gmail.com",
-    "adityaafendi22@gmail.com"
-  ];
-  const isAdmin = isLoaded && isSignedIn && adminEmails.includes(user?.primaryEmailAddress?.emailAddress?.toLowerCase() || "");
+  const [isAdmin, setIsAdmin] = useState(false);
+  const [isSuperAdmin, setIsSuperAdmin] = useState(false);
+  const [actionLoading, setActionLoading] = useState<string | null>(null);
+  const [successMsg, setSuccessMsg] = useState("");
 
   useEffect(() => {
-    if (isLoaded && !isAdmin) {
+    if (!isLoaded) return;
+    if (!isSignedIn) {
       setError("Unauthorized access. Administrative permissions required.");
       setLoading(false);
       return;
     }
 
-    async function loadUsers() {
+    const loadUsers = async () => {
       try {
         const token = await getToken();
         const apiBase = getApiUrl();
         
+        // Verify admin status from backend profile
+        const profileRes = await fetch(`${apiBase}/auth/profile`, {
+          headers: { Authorization: `Bearer ${token}` }
+        });
+        
+        if (!profileRes.ok) {
+          setError("Failed to verify administrative status.");
+          setLoading(false);
+          return;
+        }
+        
+        const profileData = await profileRes.json();
+        const superAdminEmails = [
+          "adityaputra.afendi@gmail.com",
+          "adityaafendi02@gmail.com",
+          "adityaafendi22@gmail.com"
+        ];
+        const isSuper = superAdminEmails.includes(user?.primaryEmailAddress?.emailAddress?.toLowerCase() || "");
+        
+        if (!profileData.is_admin && !isSuper) {
+          setError("Unauthorized access. Administrative permissions required.");
+          setLoading(false);
+          return;
+        }
+        
+        setIsAdmin(true);
+        setIsSuperAdmin(isSuper);
+
         const r = await fetch(`${apiBase}/admin/metrics`, {
           headers: { Authorization: `Bearer ${token}` }
         });
@@ -57,12 +84,105 @@ export default function AdminUsersPage() {
       } finally {
         setLoading(false);
       }
-    }
+    };
 
-    if (isLoaded && isAdmin) {
-      loadUsers();
+    loadUsers();
+  }, [isLoaded, isSignedIn, getToken]);
+
+  const handleResetLimit = async (userId: string) => {
+    if (!window.confirm("Are you sure you want to reset the daily limit for this user?")) return;
+    setActionLoading(userId);
+    setSuccessMsg("");
+    try {
+      const token = await getToken();
+      const r = await fetch(`${getApiUrl()}/admin/users/${userId}/reset-limit`, {
+        method: "POST",
+        headers: { Authorization: `Bearer ${token}` }
+      });
+      if (r.ok) {
+        setSuccessMsg("User scan limit has been successfully reset!");
+      } else {
+        const err = await r.json();
+        alert(err.detail || "Failed to reset limit.");
+      }
+    } catch (e) {
+      alert("Network error.");
+    } finally {
+      setActionLoading(null);
     }
-  }, [isLoaded, isSignedIn, isAdmin, getToken]);
+  };
+
+  const handlePromote = async (userId: string) => {
+    if (!window.confirm("Promote this user to Admin?")) return;
+    setActionLoading(userId);
+    setSuccessMsg("");
+    try {
+      const token = await getToken();
+      const r = await fetch(`${getApiUrl()}/admin/users/${userId}/promote`, {
+        method: "POST",
+        headers: { Authorization: `Bearer ${token}` }
+      });
+      if (r.ok) {
+        setSuccessMsg("User promoted to Admin successfully!");
+        setUsersList(prev => prev.map(u => u.id === userId ? { ...u, is_admin: true } : u));
+      } else {
+        const err = await r.json();
+        alert(err.detail || "Failed to promote user.");
+      }
+    } catch (e) {
+      alert("Network error.");
+    } finally {
+      setActionLoading(null);
+    }
+  };
+
+  const handleDemote = async (userId: string) => {
+    if (!window.confirm("Demote this Admin back to regular user?")) return;
+    setActionLoading(userId);
+    setSuccessMsg("");
+    try {
+      const token = await getToken();
+      const r = await fetch(`${getApiUrl()}/admin/users/${userId}/demote`, {
+        method: "POST",
+        headers: { Authorization: `Bearer ${token}` }
+      });
+      if (r.ok) {
+        setSuccessMsg("Admin demoted to regular user successfully.");
+        setUsersList(prev => prev.map(u => u.id === userId ? { ...u, is_admin: false } : u));
+      } else {
+        const err = await r.json();
+        alert(err.detail || "Failed to demote user.");
+      }
+    } catch (e) {
+      alert("Network error.");
+    } finally {
+      setActionLoading(null);
+    }
+  };
+
+  const handleDelete = async (userId: string) => {
+    if (!window.confirm("WARNING: Deleting this user will permanently remove all their CVs, reports, and data. Proceed?")) return;
+    setActionLoading(userId);
+    setSuccessMsg("");
+    try {
+      const token = await getToken();
+      const r = await fetch(`${getApiUrl()}/admin/users/${userId}`, {
+        method: "DELETE",
+        headers: { Authorization: `Bearer ${token}` }
+      });
+      if (r.ok) {
+        setSuccessMsg("User account deleted successfully.");
+        setUsersList(prev => prev.filter(u => u.id !== userId));
+      } else {
+        const err = await r.json();
+        alert(err.detail || "Failed to delete user.");
+      }
+    } catch (e) {
+      alert("Network error.");
+    } finally {
+      setActionLoading(null);
+    }
+  };
 
   if (loading) {
     return (
@@ -127,21 +247,29 @@ export default function AdminUsersPage() {
         />
       </div>
 
+      {/* Success Notification */}
+      {successMsg && (
+        <div className="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 text-sm font-medium animate-fade-in">
+          {successMsg}
+        </div>
+      )}
+
       {/* Users Table */}
       <div className="p-6 rounded-2xl bg-surface border border-border space-y-4 shadow-sm">
         <div className="overflow-x-auto rounded-xl border border-border bg-background/50">
           <table className="w-full text-sm text-left text-foreground/90">
             <thead className="text-xs text-muted-foreground uppercase bg-muted/30 border-b border-border">
               <tr>
-                <th scope="col" className="px-6 py-3 font-semibold font-mono tracking-wider">User Email</th>
-                <th scope="col" className="px-6 py-3 font-semibold font-mono tracking-wider">Clerk User ID</th>
+                <th scope="col" className="px-6 py-3 font-semibold font-mono tracking-wider">User Profile</th>
+                <th scope="col" className="px-6 py-3 font-semibold font-mono tracking-wider">Role</th>
                 <th scope="col" className="px-6 py-3 font-semibold font-mono tracking-wider">Registration Date</th>
+                <th scope="col" className="px-6 py-3 font-semibold font-mono tracking-wider text-right">Actions</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-border">
               {filteredUsers.length === 0 ? (
                 <tr>
-                  <td colSpan={3} className="px-6 py-8 text-center text-muted-foreground text-xs font-mono">
+                  <td colSpan={4} className="px-6 py-8 text-center text-muted-foreground text-xs font-mono">
                     No users matching criteria.
                   </td>
                 </tr>
@@ -152,13 +280,95 @@ export default function AdminUsersPage() {
                     day: "numeric",
                     year: "numeric"
                   });
+
+                  const superAdminEmails = [
+                    "adityaputra.afendi@gmail.com",
+                    "adityaafendi02@gmail.com",
+                    "adityaafendi22@gmail.com"
+                  ];
+                  const targetIsSuper = superAdminEmails.includes(u.email.toLowerCase());
+                  const targetIsAdmin = u.is_admin || targetIsSuper;
+
+                  let roleBadge = (
+                    <span className="px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-muted text-muted-foreground font-mono">
+                      USER
+                    </span>
+                  );
+                  if (targetIsSuper) {
+                    roleBadge = (
+                      <span className="px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-orange-500/10 text-orange-600 border border-orange-500/20 font-mono">
+                        SUPER ADMIN
+                      </span>
+                    );
+                  } else if (u.is_admin) {
+                    roleBadge = (
+                      <span className="px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-blue-500/10 text-blue-600 border border-blue-500/20 font-mono">
+                        ADMIN
+                      </span>
+                    );
+                  }
+
                   return (
                     <tr key={u.id} className="hover:bg-muted/40 transition">
-                      <td className="px-6 py-4 font-semibold text-foreground">{u.email}</td>
-                      <td className="px-6 py-4 font-mono text-xs text-muted-foreground">{u.id}</td>
-                      <td className="px-6 py-4 text-xs text-muted-foreground flex items-center gap-1.5 font-mono">
-                        <Calendar className="w-3.5 h-3.5 text-muted-foreground" />
-                        {dateStr}
+                      <td className="px-6 py-4">
+                        <div className="font-semibold text-foreground">{u.email}</div>
+                        <div className="text-[10px] font-mono text-muted-foreground">{u.id}</div>
+                      </td>
+                      <td className="px-6 py-4">{roleBadge}</td>
+                      <td className="px-6 py-4 text-xs text-muted-foreground font-mono">
+                        <div className="flex items-center gap-1.5">
+                          <Calendar className="w-3.5 h-3.5 text-muted-foreground" />
+                          {dateStr}
+                        </div>
+                      </td>
+                      <td className="px-6 py-4 text-right">
+                        <div className="flex items-center justify-end gap-2">
+                          {/* Reset limit button (visible for regular users/admins, not super admin) */}
+                          {!targetIsSuper && (
+                            <button
+                              onClick={() => handleResetLimit(u.id)}
+                              disabled={actionLoading === u.id}
+                              className="px-2.5 py-1 text-[11px] font-semibold font-mono bg-teal-500/10 hover:bg-teal-500/20 text-teal-600 border border-teal-500/25 rounded-md transition disabled:opacity-50"
+                            >
+                              Reset Limit
+                            </button>
+                          )}
+
+                          {/* Promote/demote button (visible ONLY to Super Admin) */}
+                          {isSuperAdmin && !targetIsSuper && (
+                            u.is_admin ? (
+                              <button
+                                onClick={() => handleDemote(u.id)}
+                                disabled={actionLoading === u.id}
+                                className="px-2.5 py-1 text-[11px] font-semibold font-mono bg-amber-500/10 hover:bg-amber-500/20 text-amber-600 border border-amber-500/25 rounded-md transition disabled:opacity-50"
+                              >
+                                Demote
+                              </button>
+                            ) : (
+                              <button
+                                onClick={() => handlePromote(u.id)}
+                                disabled={actionLoading === u.id}
+                                className="px-2.5 py-1 text-[11px] font-semibold font-mono bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-600 border border-indigo-500/25 rounded-md transition disabled:opacity-50"
+                              >
+                                Promote
+                              </button>
+                            )
+                          )}
+
+                          {/* Delete button:
+                              - Super Admin can delete anyone except other Super Admins.
+                              - Admin can delete regular Users only.
+                          */}
+                          {!targetIsSuper && (!targetIsAdmin || isSuperAdmin) && (
+                            <button
+                              onClick={() => handleDelete(u.id)}
+                              disabled={actionLoading === u.id}
+                              className="px-2.5 py-1 text-[11px] font-semibold font-mono bg-red-500/10 hover:bg-red-500/20 text-red-600 border border-red-500/25 rounded-md transition disabled:opacity-50"
+                            >
+                              Delete
+                            </button>
+                          )}
+                        </div>
                       </td>
                     </tr>
                   );

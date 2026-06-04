@@ -194,25 +194,22 @@
 }
 
 .marquee-logo {
-  height: 2.5rem; /* 40px */
+  height: 3rem; /* 48px */
   width: auto;
   object-fit: contain;
   user-select: none;
   mix-blend-mode: multiply;
   filter: grayscale(100%);
   opacity: 0.6;
-  transition: all 0.3s ease;
 }
-.marquee-logo:hover {
-  opacity: 1;
-  filter: grayscale(0%);
+@media (min-width: 1024px) {
+  .marquee-logo {
+    height: 4.5rem; /* 72px */
+  }
 }
 .dark .marquee-logo {
   mix-blend-mode: screen;
   filter: invert(1) grayscale(100%) brightness(1.5);
-}
-.dark .marquee-logo:hover {
-  filter: invert(1) grayscale(0%) brightness(1.5);
 }
 
 /* === CARD INTERACTIONS === */

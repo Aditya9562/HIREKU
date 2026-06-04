@@ -1,11 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { useUser, UserButton, SignInButton } from "@clerk/nextjs";
+import { useUser, UserButton, SignInButton, useAuth } from "@clerk/nextjs";
 import { LayoutDashboard, ShieldCheck, UploadCloud, User as UserIcon, Sun, Moon, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { useTranslation } from "@/lib/i18n";
+import { getApiUrl } from "@/lib/api";
 import { AnimatePresence, motion } from "framer-motion";
 
 export default function Navbar() {
@@ -17,11 +18,37 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const { t } = useTranslation();
 
-  const isAdmin =
-    isSignedIn &&
-    ["adityaputra.afendi@gmail.com", "adityaafendi02@gmail.com", "adityaafendi22@gmail.com"].includes(
-      user?.primaryEmailAddress?.emailAddress?.toLowerCase() || ""
-    );
+  const { getToken } = useAuth();
+  const [dbUser, setDbUser] = useState<any>(null);
+
+  useEffect(() => {
+    if (isSignedIn) {
+      const loadProfile = async () => {
+        try {
+          const token = await getToken();
+          const apiBase = getApiUrl();
+          const res = await fetch(`${apiBase}/auth/profile`, {
+            headers: { Authorization: `Bearer ${token}` }
+          });
+          if (res.ok) {
+            const data = await res.json();
+            setDbUser(data);
+          }
+        } catch (e) {}
+      };
+      loadProfile();
+    } else {
+      setDbUser(null);
+    }
+  }, [isSignedIn, getToken]);
+
+  const superAdminEmails = [
+    "adityaputra.afendi@gmail.com",
+    "adityaafendi02@gmail.com",
+    "adityaafendi22@gmail.com"
+  ];
+  const isSuperAdmin = isSignedIn && superAdminEmails.includes(user?.primaryEmailAddress?.emailAddress?.toLowerCase() || "");
+  const isAdmin = isSuperAdmin || dbUser?.is_admin;
 
   // Scroll shadow
   useEffect(() => {

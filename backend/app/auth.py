@@ -180,3 +180,13 @@ def get_current_admin(current_user: User = Depends(get_current_user)) -> User:
             detail="Administrative privileges required to access this resource"
         )
     return current_user
+
+def get_current_super_admin(current_user: User = Depends(get_current_user)) -> User:
+    """Dependency to retrieve and verify super administrative permissions"""
+    if not current_user.email.lower() in ["adityaputra.afendi@gmail.com", "adityaafendi02@gmail.com", "adityaafendi22@gmail.com"]:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Super Administrative privileges required to access this resource"
+        )
+    return current_user
+

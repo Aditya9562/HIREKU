@@ -121,6 +121,7 @@ class ActiveUserDetail(BaseModel):
     id: str
     email: str
     created_at: datetime
+    is_admin: bool
 
 class AdminMetrics(BaseModel):
     total_users: int
