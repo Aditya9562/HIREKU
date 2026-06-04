@@ -16,7 +16,7 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState("hero");
   const [darkMode, setDarkMode] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const { t } = useTranslation();
+  const { t, lang } = useTranslation();
 
   const { getToken } = useAuth();
   const [dbUser, setDbUser] = useState<any>(null);
@@ -107,7 +107,10 @@ export default function Navbar() {
   ];
 
   const navLinks = isSignedIn
-    ? dashLinks.map(l => ({ href: l.href, label: l.label, id: "" }))
+    ? [
+        ...dashLinks.map(l => ({ href: l.href, label: l.label, id: "" })),
+        ...(isAdmin ? [{ href: "/admin", label: lang === "id" ? "Pusat Analisis Admin" : "Admin Analytics Center", id: "" }] : [])
+      ]
     : landingLinks;
 
   return (
