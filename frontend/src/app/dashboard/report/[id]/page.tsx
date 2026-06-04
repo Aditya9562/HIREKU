@@ -474,11 +474,17 @@ export default function AnalysisReport() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setActiveModalMetric(null)}
-              className="absolute inset-0 bg-background/80 backdrop-blur-md"
+              className="absolute inset-0 bg-background/30 backdrop-blur-[6px]"
             />
             
             {/* Glow spotlight behind card */}
-            <div className="absolute w-80 h-80 rounded-full bg-accent/20 blur-3xl pointer-events-none -z-10 animate-pulse"></div>
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.8 }}
+              transition={{ duration: 0.3 }}
+              className="absolute w-80 h-80 rounded-full bg-accent/20 blur-3xl pointer-events-none -z-10"
+            />
 
             {/* Modal Card Content */}
             <motion.div
@@ -488,14 +494,6 @@ export default function AnalysisReport() {
               transition={{ type: "spring", duration: 0.3 }}
               className="relative max-w-lg w-full bg-surface border border-accent/25 rounded-3xl p-8 shadow-2xl flex flex-col space-y-6 card-3d z-10"
             >
-              {/* Close button */}
-              <button 
-                onClick={() => setActiveModalMetric(null)}
-                className="absolute top-4 right-4 text-xs font-mono font-semibold text-muted-foreground hover:text-foreground transition"
-              >
-                ✕ {lang === "id" ? "TUTUP" : "CLOSE"}
-              </button>
-
               <div className="space-y-1">
                 <span className="label-eyebrow text-accent uppercase font-bold text-[10px] tracking-wider">
                   {lang === "id" ? "Metrik Evaluasi" : "Evaluation Metric"}
